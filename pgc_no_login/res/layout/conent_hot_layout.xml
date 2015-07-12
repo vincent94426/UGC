@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@null">
+
+    <!-- advert -->
+
+    <com.sobey.ioffer.ui.view.AdvertGallery
+        android:id="@+id/content_advert"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp" 
+        android:visibility="gone"
+         android:background="@null"/>
+
+    <!-- list -->
+
+    <com.sobey.ioffer.ui.view.ContentTypeListView
+        android:id="@+id/content_host_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_advert" 
+        android:background="@null"/>
+
+</RelativeLayout>

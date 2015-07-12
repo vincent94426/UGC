@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ic_ioffer_program_detail_tocmbg"
+    android:clickable="true"
+    android:onClick="buttonOnClick" >
+
+    <TextView
+        android:id="@+id/program_detail_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="25dp"
+        android:text="@string/label_content_more"
+        android:textColor="@color/color_login_input_text" />
+
+    <TextView
+        android:id="@+id/program_detail_gotorc"
+        android:layout_width="12dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/ic_ioffer_program_detail_tocmdetail" />
+
+</RelativeLayout>

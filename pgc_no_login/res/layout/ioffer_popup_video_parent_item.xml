@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#88000000" >
+
+    <RelativeLayout
+        android:id="@+id/filter_layout_2"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_ioffer_video_filter_b_bg" >
+
+        <TextView
+            android:id="@+id/video_catalog_parent_title"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/filter_layout_1"
+            android:singleLine="true"
+            android:layout_marginLeft="21dp"
+            android:gravity="center_vertical"
+            android:text="歌曲类"
+            android:textColor="#FC9702"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</FrameLayout>

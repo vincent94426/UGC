@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000" >
+
+    <RelativeLayout
+        android:id="@+id/ugc_record_right"
+        android:layout_width="76dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ugc_ic_live_background"
+        android:orientation="vertical"
+        android:paddingBottom="25dp" >
+
+        <TextView
+            android:id="@+id/bnt_recorder_confirm"
+            android:layout_width="58dp"
+            android:layout_height="36dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/ugc_ic_ioffer_recorder_ok_selector"
+            android:clickable="true"
+            android:onClick="buttonOnclick" />
+
+        <TextView
+            android:id="@+id/bnt_recorder_delete"
+            android:layout_width="58dp"
+            android:layout_height="36dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ugc_ic_ioffer_recorder_delete_selector"
+            android:clickable="true"
+            android:onClick="buttonOnclick" />
+
+        <LinearLayout
+            android:id="@+id/shutter_view"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ugc_ic_btn_shutter_normal" >
+
+            <ImageButton
+                android:id="@+id/bnt_recorder_start"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/ugc_ic_btn_video_record"
+                android:onClick="buttonOnclick" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ugc_record_surface_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toLeftOf="@id/ugc_record_right"
+        android:background="#00000000" >
+
+        <SurfaceView
+            android:id="@+id/recorder_video_sureface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/recorder_time_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="00:00:00"
+            android:textColor="#ff0000"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

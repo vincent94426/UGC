@@ -1,0 +1,38 @@
+<resources>
+
+    <dimen name="ioffer_top_bar_height">52dp</dimen>
+    <dimen name="ioffer_popup_menu_height">300dp</dimen>
+    <dimen name="ioffer_input_item_height">40dp</dimen>
+    <dimen name="ioffer_input_text_size">16sp</dimen>
+    <dimen name="ioffer_button_height">40dp</dimen>
+    <dimen name="ioffer_add_upload_height">38dp</dimen>
+    <dimen name="ioffer_tab_user_item_height">54dp</dimen>
+    <dimen name="ioffer_upload_item_height">50dp</dimen>
+    <dimen name="ioffer_content_type_item_icon_width">76dp</dimen>
+    <dimen name="ioffer_content_type_item_icon_height">68dp</dimen>
+    <dimen name="ioffer_content_type_item_height">68dp</dimen>
+    <dimen name="ioffer_upload_item_middle_height">56dp</dimen>
+    <dimen name="ioffer_program_detail_about_height">80dp</dimen>
+    <dimen name="ioffer_program_detail_tocomment_height">40dp</dimen>
+    <dimen name="ioffer_program_detail_watch_height">60dp</dimen>
+    <dimen name="ioffer_program_detail_describe_height">90dp</dimen>
+    <dimen name="ioffer_content_width">48dp</dimen>
+    <dimen name="ioffer_content_height">40dp</dimen>
+    <dimen name="dimen_login_input_text_size">18sp</dimen>
+
+    <!-- UGC -->
+    <dimen name="ugc_ioffer_top_bar_height">52dp</dimen>
+    <dimen name="ugc_ioffer_popup_menu_height">300dp</dimen>
+    <dimen name="ugc_ioffer_input_item_height">44dp</dimen>
+    <dimen name="ugc_ioffer_input_text_size">16sp</dimen>
+    <dimen name="ugc_ioffer_button_height">40dp</dimen>
+    <dimen name="ugc_ioffer_add_upload_height">38dp</dimen>
+
+    <!-- 视频裁剪 -->
+    <dimen name="ugc_video_clip_height">90dip</dimen>
+    <dimen name="ugc_video_clip_text_size">12sp</dimen>
+    <dimen name="ugc_video_clip_rect_height">27dip</dimen>
+    <dimen name="ugc_video_clip_drag_width">23dip</dimen>
+    <dimen name="ugc_video_clip_drag_height">32dip</dimen>
+
+</resources>

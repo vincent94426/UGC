@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/jev"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/list_haoyouliebiao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="好友列表"
+        android:textColor="#F0E68C"
+        android:textSize="22sp"
+        android:ems="10" >
+
+        <requestFocus />
+    </TextView>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="15sp"
+        android:ems="10" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="15sp"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/list_friend1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="好友ID:1"
+        android:textSize="30sp"
+        android:textColor="#F0E68C"
+        android:ems="10" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="15sp"
+        android:ems="10" />
+    
+    <TextView
+        android:id="@+id/list_friend2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="好友ID:2"
+        android:textColor="#F0E68C"
+        android:textSize="30sp"
+        android:ems="10" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="15sp"
+        android:ems="10" />
+    
+    <TextView
+        android:id="@+id/list_friend3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="好友ID:3"
+        android:textSize="30sp"
+        android:textColor="#F0E68C"
+        android:ems="10" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="15sp"
+        android:ems="10" />
+    
+    <TextView
+        android:id="@+id/list_friend4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="好友ID:4"
+        android:textSize="30sp"
+        android:textColor="#F0E68C"
+        android:ems="10" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="15sp"
+        android:ems="10" />
+    
+    <TextView
+        android:id="@+id/list_friend5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="好友ID:5"
+        android:textSize="30sp"
+        android:textColor="#F0E68C"
+        android:ems="10" />
+
+
+
+
+    
+
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="9px"
+    android:layout_height="9px"
+    android:background="@drawable/sobey_promotion_select_default"
+    android:focusable="false"/>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:baselineAligned="false"
+    android:background="#FF000000">
+	<!-- content layout -->
+	<LinearLayout android:id="@+id/ice_root_content_scrollview" 
+				  android:orientation="vertical"
+				  android:layout_width="fill_parent" 
+				  android:layout_height="fill_parent" 
+				  android:layout_weight="1"
+				  android:persistentDrawingCache="scrolling"/>
+</LinearLayout>

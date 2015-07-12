@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<url-config>
+
+    <url_other_wifi>
+        http://192.168.1.30/AppManager/
+    </url_other_wifi>
+
+    <url_other_3g>
+		http://192.168.1.30/AppManager/
+    </url_other_3g>
+
+    <url_sobey_wifi>
+		http://192.168.1.30/AppManager/
+    </url_sobey_wifi>
+
+    <url_sobey_3g>
+		http://192.168.1.30/AppManager/
+    </url_sobey_3g>
+
+</url-config>

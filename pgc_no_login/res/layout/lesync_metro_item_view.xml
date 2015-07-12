@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.dezhisoft.cloud.mi.newugc.ugv2.view.metro.view.MetroItemLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:descendantFocusability="blocksDescendants"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    >
+
+    <RelativeLayout
+        android:id="@+id/lesync_metro_item_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:focusable="false"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/lesync_metro_item_content_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:focusable="false"
+            android:src="@drawable/metro_main_contact" />
+
+        <TextView
+            android:id="@+id/lesync_metro_item_content_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lesync_metro_item_content_icon"
+            android:layout_centerHorizontal="true"
+            android:text="@string/module_text_contact"
+            android:focusable="false"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColor="@color/ugv2_white"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/lesync_metro_item_animation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#cd357b"
+        android:focusable="false"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/lesync_metro_item_animation_text_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/metro_main_contact_animation"
+            android:gravity="center"
+            android:text="180"
+            android:focusable="false"
+            android:textColor="@color/ugv2_white"
+            android:paddingRight="15dp"
+            android:textSize="@dimen/metro_item_text_font_size"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lesync_metro_item_animation_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:focusable="false"
+            android:text="有变化，需备份"
+            android:textColor="@color/ugv2_metro_tips_text"
+            android:textSize="14sp" />
+    </LinearLayout>
+</cn.dezhisoft.cloud.mi.newugc.ugv2.view.metro.view.MetroItemLayout>

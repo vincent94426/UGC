@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@null" >
+
+    <RelativeLayout
+        android:id="@+id/assert_icon_layout"
+        android:layout_width="70dp"
+        android:layout_height="@dimen/ioffer_program_detail_watch_height"
+        android:background="@drawable/ic_ioffer_input_lable_m_gb" >
+
+        <com.sobey.sdk.cache.RecyclingImageView
+            android:id="@+id/program_assets_big_icon"
+            android:layout_width="58dip"
+            android:layout_height="48dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_ioffer_program_detail_watch_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/ioffer_program_detail_watch_height"
+        android:layout_toRightOf="@id/assert_icon_layout"
+        android:background="@drawable/ic_ioffer_input_lable_m_gb" >
+
+        <RelativeLayout
+            android:id="@+id/program_assets_share_layout"
+            android:layout_width="60dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:background="@null"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_width="44dip"
+                android:layout_height="40dip"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_ioffer_shared_selector" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ioffer_program_preview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dip"
+            android:layout_toLeftOf="@id/program_assets_share_layout"
+            android:clickable="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/program_assets_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="Headline"
+                android:textColor="#1b0b38"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/program_assets_icon"
+                android:layout_width="15dip"
+                android:layout_height="15dip"
+                android:layout_below="@id/program_assets_title"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/ic_ioffer_content_s_audio" />
+
+            <TextView
+                android:id="@+id/program_assets_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/program_assets_title"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="5dip"
+                android:layout_toRightOf="@id/program_assets_icon"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="描述信息"
+                android:textColor="#1b0b38"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

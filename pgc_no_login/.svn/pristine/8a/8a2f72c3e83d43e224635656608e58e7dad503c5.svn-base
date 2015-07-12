@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00000000" >
+
+    <RelativeLayout
+        android:id="@+id/right_layout"
+        android:layout_width="76dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ugc_ic_live_background"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/shutter_view"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ugc_ic_btn_shutter_normal" >
+
+            <ImageButton
+                android:id="@+id/bnt_live_start"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/ugc_ic_btn_video_record"
+                android:onClick="buttonOnclick" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- surface view -->
+
+    <RelativeLayout
+        android:id="@+id/live_video_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toLeftOf="@id/right_layout" >
+
+        <SurfaceView
+            android:id="@+id/live_video_sureface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/live_time_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="00:00:00"
+        android:textColor="#ff0000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/live_speed_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/live_time_textview"
+        android:layout_below="@id/live_time_textview"
+        android:text="0.0 KB/s"
+        android:textColor="#ff0000"
+        android:textSize="20sp" />
+
+    <!-- state text view -->
+
+    <TextView
+        android:id="@+id/live_state_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/live_time_textview"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/right_layout"
+        android:text="Disconnected"
+        android:textColor="#ff0000"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@id/right_layout" >
+
+        <TextView
+            android:id="@+id/live_info_textview_1"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#ff0000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/live_info_textview_2"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:layout_alignLeft="@id/live_info_textview_1"
+            android:layout_below="@id/live_info_textview_1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#ff0000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/live_info_textview_3"
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:layout_alignLeft="@id/live_info_textview_1"
+            android:layout_below="@id/live_info_textview_2"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#ff0000"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

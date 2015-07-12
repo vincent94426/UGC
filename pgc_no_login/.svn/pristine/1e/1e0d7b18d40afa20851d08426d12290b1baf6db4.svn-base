@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/ioffer_top_bar_height"
+    android:background="@drawable/ic_ioffer_title_bar_bg" >
+
+    <TextView
+        android:id="@+id/bnt_ioffer_title_bar_left"
+        android:layout_width="60dp"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_margin="2dp"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/ic_ioffer_top_bar_back_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="topBarButtonOnclick"
+        android:text="@string/ioffer_top_bar_back"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/ioffer_title_bar_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Ioffer Title"
+        android:textColor="@color/color_register_big_label"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/bnt_ioffer_title_bar_right"
+        android:layout_width="60dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="2dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/ic_ioffer_top_bar_ok_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="topBarButtonOnclick"
+        android:text="@string/ioffer_top_bar_ok"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+</RelativeLayout>

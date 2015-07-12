@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ic_ioffer_register_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/program_detail_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ioffer_top_bar_height"
+        android:background="@drawable/ic_ioffer_title_bar_bg" >
+
+        <TextView
+            android:id="@+id/ioffer_program_detail_back"
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_ioffer_top_bar_back_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="topBarOnClick"
+            android:text="@string/ioffer_top_bar_back"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/ioffer_program_detail_title"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null" >
+
+            <RelativeLayout
+                android:id="@+id/program_detail_about"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/ioffer_program_detail_about_height"
+                android:background="@drawable/ic_ioffer_content_rank_default" >
+
+                <ImageView
+                    android:id="@+id/program_detail_image"
+                    android:layout_width="65dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/ic_ioffer_content_category_i_icon" />
+
+                <TextView
+                    android:id="@+id/program_detail_name"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/program_detail_image"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/program_detail_image"
+                    android:singleLine="true"
+                    android:textColor="#f38e02"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/program_detail_event"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/program_detail_name"
+                    android:layout_below="@id/program_detail_name"
+                    android:singleLine="true"
+                    android:textColor="@color/color_prgram_detail_name" />
+
+                <TextView
+                    android:id="@+id/program_detail_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/program_detail_name"
+                    android:layout_below="@id/program_detail_event"
+                    android:singleLine="true"
+                    android:textColor="@color/color_prgram_detail_name" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp" >
+
+                    <ImageView
+                        android:id="@+id/program_detail_user_icon"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/ic_ioffer_user_icon" />
+
+                    <TextView
+                        android:id="@+id/program_detail_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:singleLine="true"
+                        android:textColor="@color/color_prgram_detail_name" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/program_detail_describe"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/ioffer_program_detail_describe_height"
+                android:layout_below="@id/program_detail_about"
+                android:padding="15dp" >
+
+                <TextView
+                    android:id="@+id/program_detail_describe_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/label_content_descibe"
+                    android:textColor="#ff9e00"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/program_detail_describe_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/program_detail_describe_title"
+                    android:layout_marginTop="5dp"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/assets_type_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/program_detail_describe"
+                android:background="@null"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/assets_content_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/assets_comment_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/ioffer_program_detail_tocomment_height"
+                    layout="@layout/ioffer_program_detail_comment" />
+
+                <include
+                    android:id="@+id/assets_related_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/ioffer_program_detail_tocomment_height"
+                    layout="@layout/ioffer_program_detail_related" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="15dip"
+                    android:background="@null" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/wait_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</LinearLayout>

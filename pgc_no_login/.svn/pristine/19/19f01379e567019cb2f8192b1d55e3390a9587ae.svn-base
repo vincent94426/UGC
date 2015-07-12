@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<url-config>
+
+    <url_other_wifi value="http://sobey.higgses.com" >
+    </url_other_wifi>
+
+    <url_other_3g value="http://sobey.higgses.com" >
+    </url_other_3g>
+
+    <url_sobey_wifi value="http://sobey.higgses.com" >
+    </url_sobey_wifi>
+
+    <url_sobey_3g value="http://sobey.higgses.com" >
+    </url_sobey_3g>
+
+</url-config>

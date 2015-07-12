@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:background="@drawable/ic_ioffer_divide_line" />
+
+    <RelativeLayout
+        android:id="@+id/setting_quality_open_resolution"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/ic_ioffer_setting_custom_middle_bg"
+        android:clickable="true" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/label_setting_resolution"
+            android:textColor="@color/color_setting_label"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/resolution_icon"
+            android:layout_width="10dp"
+            android:layout_height="13dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_ioffer_user_arrow" />
+
+        <TextView
+            android:id="@+id/setting_resolution_textview"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/resolution_icon"
+            android:singleLine="true"
+            android:text="176x144"
+            android:textColor="@color/color_setting_label"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:background="@drawable/ic_ioffer_divide_line" />
+
+    <RelativeLayout
+        android:id="@+id/setting_quality_open_rate"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/ic_ioffer_setting_custom_end_bg"
+        android:clickable="true" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/label_setting_rate"
+            android:textColor="@color/color_setting_label"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/rate_icon"
+            android:layout_width="10dp"
+            android:layout_height="13dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_ioffer_user_arrow" />
+
+        <TextView
+            android:id="@+id/setting_rate_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/rate_icon"
+            android:singleLine="true"
+            android:text="@string/label_setting_low"
+            android:textColor="@color/color_setting_label"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</LinearLayout>

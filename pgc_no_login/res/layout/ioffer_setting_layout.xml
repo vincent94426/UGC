@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ic_ioffer_register_background" >
+
+    <include
+        android:id="@+id/top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ioffer_top_bar_height"
+        layout="@layout/ioffer_title_bar_layout" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_bar"
+        android:background="@null" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null" >
+
+            <!-- 锁定密码 -->
+
+            <TextView
+                android:id="@+id/setting_auto"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/label_setting_title_auto"
+                android:textColor="@color/color_register_big_label"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/setting_auto_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/setting_auto"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_ioffer_setting_auto_bg" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/label_setting_lock_password"
+                    android:textColor="@color/color_setting_label"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/bnt_setting_lock_password"
+                    android:layout_width="77dp"
+                    android:layout_height="27dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/ic_ioffer_bnt_off"
+                    android:onClick="buttonOnclick"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+
+            <!-- 系统设置 -->
+
+            <RelativeLayout
+                android:id="@+id/host_system_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/setting_auto_layout"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@null" >
+
+                <TextView
+                    android:id="@+id/setting_system"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/label_setting_title_system"
+                    android:textColor="@color/color_register_big_label"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/setting_system_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="49dp"
+                    android:layout_below="@id/setting_system"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/ic_ioffer_setting_auto_bg"
+                    android:paddingTop="2dp" >
+
+                    <FrameLayout
+                        android:id="@+id/login_user_web_lable"
+                        android:layout_width="100dp"
+                        android:layout_height="fill_parent"
+                        android:background="@null" >
+
+                        <TextView
+                            android:id="@+id/servie_addr_label"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:text="@string/label_setting_service_address"
+                            android:textColor="@color/color_setting_label"
+                            android:textSize="18sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/site_frame_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_toRightOf="@id/login_user_web_lable"
+                        android:background="@null" >
+
+                        <EditText
+                            android:id="@+id/edit_setting_service_address"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@null"
+                            android:inputType="text"
+                            android:maxLines="2"
+                            android:minLines="2"
+                            android:textColor="@color/color_setting_label"
+                            android:textSize="16sp" />
+                    </FrameLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!-- 录制设置 -->
+
+            <TextView
+                android:id="@+id/setting_record"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/host_system_layout"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/label_setting_title_record"
+                android:textColor="@color/color_register_big_label"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/setting_record_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/setting_record"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_ioffer_setting_auto_bg" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/label_setting_title_custom"
+                    android:textColor="@color/color_setting_label"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/bnt_setting_record"
+                    android:layout_width="77dp"
+                    android:layout_height="27dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/ic_ioffer_bnt_off"
+                    android:onClick="buttonOnclick"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+
+            <!-- 视频分辨率和质量选择 -->
+
+            <include
+                android:id="@+id/record_video_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/setting_record_layout"
+                android:layout_alignRight="@id/setting_record_layout"
+                android:layout_below="@id/setting_record_layout"
+                layout="@layout/ioffer_setting_video_layout"
+                android:visibility="gone" />
+
+            <!-- 高中低 -->
+
+            <include
+                android:id="@+id/record_quality_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="56dip"
+                android:layout_alignLeft="@id/setting_record_layout"
+                android:layout_alignRight="@id/setting_record_layout"
+                android:layout_below="@id/record_video_layout"
+                android:layout_marginTop="5dip"
+                layout="@layout/ioffer_setting_quality_layout"
+                android:visibility="visible" />
+
+            <!-- 直播设置 -->
+
+            <TextView
+                android:id="@+id/setting_live"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/record_quality_layout"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/label_setting_title_live"
+                android:textColor="@color/color_register_big_label"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/setting_live_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/setting_live"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_ioffer_setting_auto_bg" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/label_setting_title_custom"
+                    android:textColor="@color/color_setting_label"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/bnt_setting_live"
+                    android:layout_width="77dp"
+                    android:layout_height="27dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/ic_ioffer_bnt_off"
+                    android:onClick="buttonOnclick"
+                    android:scaleType="fitXY" />
+            </RelativeLayout>
+
+            <!-- 视频分辨率和质量选择 -->
+
+            <include
+                android:id="@+id/live_video_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/setting_record_layout"
+                android:layout_alignRight="@id/setting_record_layout"
+                android:layout_below="@id/setting_live_layout"
+                layout="@layout/ioffer_setting_video_layout"
+                android:visibility="gone" />
+
+            <!-- 高中低 -->
+
+            <include
+                android:id="@+id/live_quality_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="56dip"
+                android:layout_alignLeft="@id/setting_record_layout"
+                android:layout_alignRight="@id/setting_record_layout"
+                android:layout_below="@id/live_video_layout"
+                android:layout_marginTop="5dip"
+                layout="@layout/ioffer_setting_quality_layout"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dip"
+                android:layout_below="@id/live_quality_layout"
+                android:background="@null" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:background="#000000" >
+
+    <SurfaceView
+        android:id="@+id/play_video_surface"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <RelativeLayout
+        android:id="@+id/play_video_loading_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" >
+
+        <TextView
+            android:id="@+id/play_video_loading_progress"
+            android:layout_width="80dip"
+            android:layout_height="17dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="6dip"
+            android:layout_marginBottom="10dip"
+            android:gravity="center"
+            android:text="0%"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/play_video_loading_view"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/play_video_loading_progress"
+            android:background="@drawable/ic_ioffer_anim_loading" />
+
+        <TextView
+            android:layout_width="57dp"
+            android:layout_height="17dp"
+            android:layout_below="@id/play_video_loading_progress"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/play_video_loading_view"
+            android:background="@drawable/ic_sobey"
+            android:focusable="false" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/play_video_controller_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom"
+        android:background="#88000000" >
+
+        <ImageButton
+            android:id="@+id/play_video_button"
+            android:layout_width="48dp"
+            android:layout_height="56dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/ic_ioffer_play_button_selector"
+            android:onClick="buttonOnclick" />
+
+        <SeekBar
+            android:id="@+id/play_video_progress_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/play_video_button" />
+
+        <TextView
+            android:id="@+id/play_video_current"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/play_video_progress_bar"
+            android:layout_alignLeft="@id/play_video_progress_bar"
+            android:text="00:00:00"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/play_video_duration"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/play_video_progress_bar"
+            android:layout_alignRight="@id/play_video_progress_bar"
+            android:gravity="right"
+            android:text="00:00:00"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</FrameLayout>

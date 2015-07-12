@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ic_ioffer_register_background" >
+
+    <RelativeLayout
+        android:id="@+id/add_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ioffer_top_bar_height"
+        android:background="@drawable/ic_ioffer_title_bar_bg" >
+
+        <ImageButton
+            android:id="@+id/bnt_content_reload"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_ioffer_reload_selector"
+            android:gravity="center"
+            android:onClick="buttonOnclick"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/ioffer_add_title"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/table_label_title"
+            android:textColor="@color/color_register_big_label"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/bnt_content_search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_ioffer_search_selector"
+            android:gravity="center"
+            android:onClick="buttonOnclick"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <!-- 添加类型选择 -->
+
+    <LinearLayout
+        android:id="@+id/conent_bnt_choice_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ioffer_add_upload_height"
+        android:layout_below="@id/add_title_bar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <Button
+            android:id="@+id/bnt_content_hot"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ic_ioffer_content_hot_selected"
+            android:onClick="buttonOnclick"
+            android:text="@string/table_label_hot"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/bnt_content_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ic_ioffer_content_rank_default"
+            android:onClick="buttonOnclick"
+            android:text="@string/table_label_rank"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/bnt_content_category"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ic_ioffer_content_category_default"
+            android:onClick="buttonOnclick"
+            android:text="@string/table_label_category"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- 显示的内容 -->
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/conent_bnt_choice_layout"
+        android:layout_marginTop="5dp"
+        android:background="@null" >
+
+        <FrameLayout
+            android:id="@+id/content_list_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@null" />
+
+        <ProgressBar
+            android:id="@+id/wait_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</RelativeLayout>

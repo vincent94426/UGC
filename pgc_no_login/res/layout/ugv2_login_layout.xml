@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/pgc_bg"
+    android:gravity="center"
+    android:paddingBottom="4dp" >
+
+    <ImageView
+        android:id="@+id/top_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/pgc_logo" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_img"
+        android:background="@drawable/login_bg"
+        android:orientation="vertical" >
+		<ImageView
+		        android:id="@+id/logicon"
+		        android:layout_width="60dp"
+		        android:layout_height="60dp"
+		        android:layout_gravity="center_horizontal"
+		        android:src="@drawable/login_logo" />
+        <EditText
+            android:id="@+id/ugv2_login_username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_edittext"
+            android:drawableLeft="@drawable/user_ico"
+            android:hint="@string/label_login_hint_username"
+            android:maxLength="50"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="@dimen/dimen_login_input_text_size" />
+
+        <EditText
+            android:id="@+id/ugv2_login_password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_edittext"
+            android:drawableLeft="@drawable/password_ico"
+            android:hint="@string/label_login_hint_pwd"
+            android:inputType="textPassword"
+            android:maxLength="50"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="@dimen/dimen_login_input_text_size" />
+ 		<RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"            
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:orientation="horizontal"
+             android:background="@drawable/login_edittext" >
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/site_ico"/>
+	        <Spinner
+	            android:id="@+id/ugv2_login_site"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="35dp"
+	            android:background="@drawable/none_ico"
+	           />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/ugv2_login_btn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/ugv2_login_ok_btn_selector"
+                android:text="登录"
+                android:textColor="@color/color_login_bnt_text"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/checkpassword"
+                 android:button="@drawable/login_checkbox_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:checked="true"
+                android:paddingLeft="20dp"
+                android:layout_marginLeft="50dp"
+                android:text="记住密码" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ugv2_login_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ugv2_login_setting_selector" />
+    <!--
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="32dp"
+        android:layout_alignParentBottom="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/label_login_version"
+            android:textColor="@color/color_login_version"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/ugv2_login_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:onClick="buttonOnclick"
+            android:text="@string/label_login_create_account"
+            android:textColor="@color/color_login_create_account"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/ugv2_login_setting"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_ioffer_setting_selector"
+            android:onClick="buttonOnclick" />
+    </RelativeLayout> -->
+
+</RelativeLayout>

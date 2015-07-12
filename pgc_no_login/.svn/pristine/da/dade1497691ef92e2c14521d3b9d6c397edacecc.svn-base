@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/ugc_ic_ioffer_top_bar_ok_default" android:state_pressed="false"/>
+    <item android:drawable="@drawable/ugc_ic_ioffer_top_bar_ok_selected" android:state_pressed="true"/>
+
+</selector>

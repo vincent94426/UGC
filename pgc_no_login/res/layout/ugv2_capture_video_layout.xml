@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black" >
+
+    <TextView
+        android:id="@+id/ugv2_camera_exchange_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ugv2_btn_video_exchange"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:id="@+id/ugv2_video_capture_surface_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <SurfaceView
+            android:id="@+id/ugv2_camera_surfaceview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/ugv2_video_delete_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ugv2_btn_video_delete"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/ugv2_video_record_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ugv2_btn_video_record" />
+    
+    
+    <TextView
+        android:id="@+id/ugv2_camera_time_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:textColor="@android:color/holo_red_dark" />
+
+    <TextView
+        android:id="@+id/ugv2_video_ok_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ugv2_btn_video_ok"
+        android:visibility="gone" />
+
+</RelativeLayout>

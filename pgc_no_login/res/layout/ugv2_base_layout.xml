@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent"
+    >
+
+    <cn.dezhisoft.cloud.mi.newugc.ugv2.base.view.UiTopBar 
+        android:id="@+id/ugv2_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        >
+    </cn.dezhisoft.cloud.mi.newugc.ugv2.base.view.UiTopBar>
+
+    <LinearLayout 
+        android:id="@+id/ugv2_body"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/ugv2_header"
+        android:layout_alignParentBottom="true"
+        >
+        
+    </LinearLayout>
+
+</RelativeLayout>

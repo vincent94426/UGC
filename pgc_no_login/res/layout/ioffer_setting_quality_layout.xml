@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/setting_quality"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_setting_title_quality"
+        android:textColor="@color/color_register_big_label"
+        android:textSize="20sp"
+        android:textStyle="bold" 
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/setting_quality_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_ioffer_setting_auto_bg"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <TextView
+            android:id="@+id/bnt_setting_quality_low"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ic_ioffer_setting_quality_low_selected"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/label_setting_low"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/bnt_setting_quality_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ic_ioffer_setting_quality_middle_default"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/label_setting_middle"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/bnt_setting_quality_high"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ic_ioffer_setting_quality_high_default"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/label_setting_high"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

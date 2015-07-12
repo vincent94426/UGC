@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ugc_ic_ioffer_register_background" >
+
+    <RelativeLayout
+        android:id="@+id/add_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ugc_ioffer_top_bar_height"
+        android:background="@drawable/ugc_ic_ioffer_title_bar_bg" >
+
+        <TextView
+            android:id="@+id/ioffer_select_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/ugc_title_select_image"
+            android:textColor="@color/ugc_color_register_big_label"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/select_image_grap"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/add_title_bar"
+        android:layout_marginTop="5dip"
+        android:columnWidth="64dp"
+        android:gravity="center"
+        android:horizontalSpacing="5dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp" />
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@null" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp" >
+
+        <ImageView
+            android:id="@+id/video_item_icon"
+            android:layout_width="48dip"
+            android:layout_height="48dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_launcher"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/video_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:layout_toRightOf="@id/video_item_icon"
+            android:singleLine="true"
+            android:text="Sobey 年会"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/video_item_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/video_item_name"
+            android:layout_below="@id/video_item_name"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="2dip"
+            android:text="00:10:09"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</FrameLayout>

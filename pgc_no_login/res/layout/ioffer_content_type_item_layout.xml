@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@null" >
+
+    <TextView
+        android:id="@+id/content_type_load"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ioffer_content_type_item_height"
+        android:gravity="center"
+        android:text="@string/label_content_load"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:visibility="invisible" 
+        android:background="@drawable/ic_ioffer_content_type_selector"/>
+
+    <RelativeLayout
+        android:id="@+id/content_type_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ioffer_content_type_item_height"
+        android:background="@drawable/ic_ioffer_content_type_selector" 
+        android:visibility="visible">
+
+        <com.sobey.sdk.cache.RecyclingImageView
+            android:id="@+id/content_type_icon"
+            android:layout_width="@dimen/ioffer_content_type_item_icon_width"
+            android:layout_height="@dimen/ioffer_content_type_item_icon_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dip"
+            android:layout_marginBottom="5dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_ioffer_content_category_v_icon" />
+
+        <TextView
+            android:id="@+id/content_type_arrow"
+            android:layout_width="10dp"
+            android:layout_height="13dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_ioffer_user_arrow" />
+
+        <ImageView
+            android:id="@+id/content_type_catalog"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/content_type_arrow" />
+
+        <!-- 标题 -->
+
+        <TextView
+            android:id="@+id/content_type_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/content_type_icon"
+            android:layout_toLeftOf="@id/content_type_catalog"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="索贝年会"
+            android:textColor="@color/color_upload_item_title"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/content_type_description"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_type_title"
+            android:layout_alignLeft="@id/content_type_title"
+            android:layout_alignRight="@id/content_type_title"
+            android:singleLine="true"
+            android:text="开门红舞蹈"
+            android:textColor="@color/color_upload_item_detail"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/content_type_comment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_type_description"
+            android:layout_alignLeft="@id/content_type_title"
+            android:layout_alignRight="@id/content_type_title"
+            android:singleLine="true"
+            android:text="5条评论"
+            android:textColor="@color/color_upload_item_detail"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</FrameLayout>

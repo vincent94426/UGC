@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ugv2_top_title">#9de4ff</color>
+    <color name="ugv2_bg_gray">#E3E3E3</color>
+    <color name="ugv2_metro_sync_description">#63e05b</color>
+    <color name="ugv2_metro_tips_text">#ffb3d6</color>
+    <color name="ugv2_white">#FFFFFF</color>
+    
+    <color name="ugv2_main_file_info">#E5E5E5</color>
+    <color name="ugv2_main_file_split">#D2D4D3</color>
+    
+    <color name="ugv2_task_item_bg">#F2F2F2</color>
+    <color name="ugv2_task_item_bg_pressed">#DDDFDE</color>
+    
+    <color name="desktop_main_color">#324C7F</color>
+    <color name="desktop_default_color">#3992ff</color>
+    
+    <color name="lesync_metro_contact">#e8438f</color>
+    <color name="lesync_metro_contact_sel">#35e8438f</color>
+	<color name="lesync_metro_photo">#f09800</color>
+	<color name="lesync_metro_photo_sel">#35f09800</color>
+	<color name="lesync_metro_sync">#33a72c</color>
+	<color name="lesync_metro_sync_sel">#3533a72c</color>
+	<color name="lesync_metro_sync_description">#63e05b</color>
+	<color name="lesync_metro_doc">#8bd305</color>
+	<color name="lesync_metro_doc_sel">#358bd305</color>
+	<color name="lesync_metro_app">#51bcc0</color>
+	<color name="lesync_metro_app_sel">#3551bcc0</color>
+	<color name="lesync_metro_sms">#aa5ec7</color>
+	<color name="lesync_metro_sms_sel">#35aa5ec7</color>
+	<color name="lesync_metro_mms">#2c80ff</color>
+	<color name="lesync_metro_mms_sel">#352c80ff</color>
+	<color name="lesync_metro_calllog">#2c80ff</color>
+	<color name="lesync_metro_calllog_sel">#352c80ff</color>
+	<color name="lesync_metro_account">#7eb1f6</color>
+	<color name="lesync_metro_tips_text">#ffb3d6</color>
+</resources>

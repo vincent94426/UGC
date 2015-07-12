@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+	<RelativeLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/friendlist_imageview_1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_ioffer_register_user_default_icon" />
+
+    <TextView
+        android:id="@+id/friendlist_textview_1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="yesterday once more"
+        android:textColor="#FF111111"
+        android:ems="10" />
+    
+    <TextView
+        android:id="@+id/friendlist_textview_2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="yesterday once more"
+        android:textColor="#FF111111"
+        android:ems="10" />
+    </RelativeLayout>
+</LinearLayout>

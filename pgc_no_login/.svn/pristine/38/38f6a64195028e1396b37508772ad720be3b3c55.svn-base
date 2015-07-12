@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#88000000" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@null" >
+
+        <RelativeLayout
+            android:id="@+id/filter_layout_1"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/ic_ioffer_video_filter_t_bg" >
+
+            <TextView
+                android:id="@+id/bnt_filter_cancel"
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/ic_ioffer_video_filter_selector"
+                android:gravity="center"
+                android:text="@string/label_filter_cancel"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/filter_title"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="@string/label_filter_title"
+                android:textColor="#FC9702"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bnt_filter_confirm"
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/ic_ioffer_video_filter_selector"
+                android:gravity="center"
+                android:text="@string/label_filter_confirm"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/filter_layout_22"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/filter_layout_1"
+            android:background="@drawable/ic_ioffer_video_filter_s_bg" >
+
+            <TextView
+                android:id="@+id/video_tilter_title"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="21dp"
+                android:text="所有分类"
+                android:textColor="#FC9702"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+            android:id="@+id/video_catalog_item_choice1"
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp" 
+            android:background="@drawable/ic_ioffer_video_filter_choice"
+            android:visibility="invisible"/>
+            
+            
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/filter_layout_22"
+            android:background="@null" >
+
+            <LinearLayout
+                android:id="@+id/filter_layout_catalog_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:orientation="vertical" />
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

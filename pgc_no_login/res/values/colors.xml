@@ -1,0 +1,24 @@
+<resources>
+
+    <color name="color_login_label_text">#271732</color>
+    <color name="color_login_bnt_text">#592203</color>
+    <color name="color_login_version">#2C8E99</color>
+    <color name="color_login_create_account">#79779F</color>
+    <color name="color_login_input_text">#ffffff</color>
+    <color name="color_prgram_detail_name">#1b0b38</color>
+    <color name="color_register_big_label">#FCFCFC</color>
+    <color name="color_register_normal_label">#271732</color>
+    <color name="color_register_input">#402A4E</color>
+    <color name="color_setting_label">#271732</color>
+    <color name="color_upload_item_title">#271732</color>
+    <color name="color_upload_item_detail">#112222</color>
+    <color name="ugc_color_login_label_text">#271732</color>
+    <color name="ugc_color_login_bnt_text">#592203</color>
+    <color name="ugc_color_add_start_bnt">#592203</color>
+    <color name="ugc_color_register_big_label">#FCFCFC</color>
+    <color name="ugc_color_register_normal_label">#271732</color>
+    <color name="ugc_color_register_input">#402A4E</color>
+    <color name="ugc_color_setting_label">#271732</color>
+    <color name="no_back">#00000000</color>
+
+</resources>

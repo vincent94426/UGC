@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@null" >
+
+    <!-- 标题 -->
+
+    <LinearLayout
+        android:id="@+id/file_title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ugc_ioffer_input_item_height"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="85dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ugc_ic_ioffer_input_lable_h_gb" >
+
+            <TextView
+                android:id="@+id/label_file_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="2dp"
+                android:focusable="false"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/ugc_label_add_file_title"
+                android:textColor="@color/ugc_color_login_label_text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ugc_ic_ioffer_input_edit_h_gb" >
+
+            <EditText
+                android:id="@+id/edit_add_file_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:singleLine="true"
+                android:textSize="@dimen/ugc_ioffer_input_text_size" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/line_1"
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:layout_below="@id/file_title_layout"
+        android:background="@drawable/ugc_ic_ioffer_divide_line" />
+
+    <!-- 关键字 -->
+
+    <LinearLayout
+        android:id="@+id/file_keywork_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ugc_ioffer_input_item_height"
+        android:layout_below="@id/line_1"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="85dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ugc_ic_ioffer_input_lable_m_gb" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="2dp"
+                android:focusable="false"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/ugc_label_add_file_keyword"
+                android:textColor="@color/ugc_color_login_label_text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ugc_ic_ioffer_input_edit_m_gb" >
+
+            <EditText
+                android:id="@+id/edit_add_file_keyword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:maxLength="50"
+                android:singleLine="true"
+                android:textSize="@dimen/ugc_ioffer_input_text_size" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/line_2_1"
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:layout_below="@id/file_keywork_layout"
+        android:background="@drawable/ugc_ic_ioffer_divide_line" />
+    
+    <!-- 描述 -->
+
+    <LinearLayout
+        android:id="@+id/file_desc_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_2_1"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="85dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ugc_ic_ioffer_input_lable_m_gb" >
+
+            <TextView
+                android:id="@+id/label_description_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="2dp"
+                android:focusable="false"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/ugc_label_add_file_description"
+                android:textColor="@color/ugc_color_login_label_text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ugc_ic_ioffer_input_edit_m_gb" >
+
+            <EditText
+                android:id="@+id/edit_add_file_description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:maxLines="8"
+                android:minHeight="@dimen/ugc_ioffer_input_item_height"
+                android:textSize="@dimen/ugc_ioffer_input_text_size" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/line_2"
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:layout_below="@id/file_desc_layout"
+        android:background="@drawable/ugc_ic_ioffer_divide_line" />
+
+    <!-- 一级分类 -->
+
+    <LinearLayout
+        android:id="@+id/file_first_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ugc_ioffer_input_item_height"
+        android:layout_below="@id/line_2"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="85dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ugc_ic_ioffer_input_lable_m_gb" >
+
+            <TextView
+                android:id="@+id/label_first_title"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="2dp"
+                android:focusable="false"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/ugc_label_add_file_first_level"
+                android:textColor="@color/ugc_color_login_label_text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ugc_ic_ioffer_input_edit_m_gb" >
+
+            <ImageButton
+                android:id="@+id/bnt_add_first_level"
+                android:layout_width="10dp"
+                android:layout_height="13dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ugc_ic_ioffer_add_file_right_arrow" />
+
+            <EditText
+                android:id="@+id/edit_add_file_first_level"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/bnt_add_first_level"
+                android:background="@null"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="false"
+                android:maxLength="50"
+                android:onClick="buttonOnclick"
+                android:singleLine="true"
+                android:textSize="@dimen/ugc_ioffer_input_text_size" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/line_3"
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:layout_below="@id/file_first_layout"
+        android:background="@drawable/ugc_ic_ioffer_divide_line" />
+
+    <!-- 二级分类 -->
+
+    <LinearLayout
+        android:id="@+id/file_second_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ugc_ioffer_input_item_height"
+        android:layout_below="@id/line_3"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="85dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ugc_ic_ioffer_input_lable_m_gb" >
+
+            <TextView
+                android:id="@+id/label_second_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="2dp"
+                android:focusable="false"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/ugc_label_add_file_second_level"
+                android:textColor="@color/ugc_color_login_label_text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ugc_ic_ioffer_input_edit_m_gb" >
+
+            <ImageButton
+                android:id="@+id/bnt_add_second_level"
+                android:layout_width="10dp"
+                android:layout_height="13dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ugc_ic_ioffer_add_file_right_arrow" />
+
+            <EditText
+                android:id="@+id/edit_add_file_second_level"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/bnt_add_second_level"
+                android:background="@null"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="false"
+                android:maxLength="50"
+                android:onClick="buttonOnclick"
+                android:singleLine="true"
+                android:textSize="@dimen/ugc_ioffer_input_text_size" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/line_4"
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:layout_below="@id/file_second_layout"
+        android:background="@drawable/ugc_ic_ioffer_divide_line" />
+
+    <!-- 上传文件 -->
+
+    <LinearLayout
+        android:id="@+id/file_path_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ugc_ioffer_input_item_height"
+        android:layout_below="@id/line_4"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="85dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ugc_ic_ioffer_input_lable_e_gb" >
+
+            <TextView
+                android:id="@+id/label_path_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="2dp"
+                android:focusable="false"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/ugc_label_add_file_path"
+                android:textColor="@color/ugc_color_login_label_text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ugc_ic_ioffer_input_edit_e_gb" >
+
+            <ImageButton
+                android:id="@+id/bnt_add_file_path"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ugc_ic_ioffer_add_file_select_path"
+                android:onClick="buttonOnclick" />
+
+            <EditText
+                android:id="@+id/edit_add_file_path"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/bnt_add_file_path"
+                android:background="@null"
+                android:clickable="true"
+                android:editable="false"
+                android:focusable="false"
+                android:maxLength="50"
+                android:onClick="buttonOnclick"
+                android:singleLine="true"
+                android:textSize="@dimen/ugc_ioffer_input_text_size" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

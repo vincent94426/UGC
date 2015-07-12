@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="4dp" >
+    <!-- android:background="@drawable/ugv2_launch_image" -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@null" >
+
+        <TextView
+            android:id="@+id/login_logo"
+            android:layout_width="80dp"
+            android:layout_height="98dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/ic_ioffer_logo"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_below="@id/login_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="@string/login_app_name"
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
+
+        <RelativeLayout
+            android:id="@+id/username_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@null" >
+
+            <FrameLayout
+                android:id="@+id/login_user_name_lable"
+                android:layout_width="85dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/ic_ioffer_input_lable_h_gb" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="2dp"
+                    android:focusable="false"
+                    android:singleLine="true"
+                    android:text="@string/label_login_username"
+                    android:textColor="@color/color_login_label_text"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/login_user_name_lable"
+                android:background="@drawable/ic_ioffer_input_edit_h_gb" >
+
+                <EditText
+                    android:id="@+id/edit_login_username"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@null"
+                    android:hint="@string/label_login_hint_username"
+                    android:maxLength="50"
+                    android:singleLine="true"
+                    android:text="admin"
+                    android:textColor="@color/color_login_input_text"
+                    android:textColorHint="@color/color_login_input_text"
+                    android:textSize="@dimen/dimen_login_input_text_size" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/login_divide"
+            android:layout_width="fill_parent"
+            android:layout_height="2px"
+            android:layout_below="@id/username_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_ioffer_divide_line"
+            android:singleLine="true" />
+
+        <RelativeLayout
+            android:id="@+id/pwd_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/login_divide"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@null" >
+
+            <FrameLayout
+                android:id="@+id/login_user_pwd_lable"
+                android:layout_width="85dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/ic_ioffer_input_lable_m_gb" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="2dp"
+                    android:focusable="false"
+                    android:text="@string/label_login_password"
+                    android:textColor="@color/color_login_label_text"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/login_user_pwd_lable"
+                android:background="@drawable/ic_ioffer_input_edit_m_gb" >
+
+                <EditText
+                    android:id="@+id/edit_login_password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@null"
+                    android:hint="@string/label_login_hint_pwd"
+                    android:inputType="textPassword"
+                    android:maxLength="50"
+                    android:singleLine="true"
+                    android:text="123456"
+                    android:textColor="@color/color_login_input_text"
+                    android:textColorHint="@color/color_login_input_text"
+                    android:textSize="@dimen/dimen_login_input_text_size" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/login_divide_1"
+            android:layout_width="fill_parent"
+            android:layout_height="2px"
+            android:layout_below="@id/pwd_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_ioffer_divide_line"
+            android:singleLine="true" />
+
+        <RelativeLayout
+            android:id="@+id/site_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/login_divide_1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@null" >
+
+            <FrameLayout
+                android:id="@+id/login_user_site_lable"
+                android:layout_width="85dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/ic_ioffer_input_lable_e_gb" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:focusable="false"
+                    android:text="@string/label_login_site_list"
+                    android:textColor="@color/color_login_label_text"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/login_user_site_lable"
+                android:background="@drawable/ic_ioffer_input_edit_e_gb" >
+
+                <TextView
+                    android:id="@+id/edit_login_site"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:maxLength="50"
+                    android:onClick="buttonOnclick"
+                    android:singleLine="true"
+                    android:text="@string/label_login_hint_site"
+                    android:textColor="@color/color_login_input_text"
+                    android:textColorHint="@color/color_login_input_text"
+                    android:textSize="@dimen/dimen_login_input_text_size" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/bnt_login_login"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/ioffer_button_height"
+            android:layout_below="@id/site_layout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/ic_ioffer_bnt_selector"
+            android:onClick="buttonOnclick"
+            android:text="@string/label_bnt_login"
+            android:textColor="@color/color_login_bnt_text"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/bnt_login_anonymity"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/ioffer_button_height"
+            android:layout_below="@id/bnt_login_login"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ic_ioffer_bnt_selector"
+            android:onClick="buttonOnclick"
+            android:text="@string/label_bnt_anonymity_login"
+            android:textColor="@color/color_login_bnt_text"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="57dp"
+            android:layout_height="17dp"
+            android:layout_below="@id/bnt_login_anonymity"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_sobey"
+            android:focusable="false" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="32dp"
+        android:layout_alignParentBottom="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/label_login_version"
+            android:textColor="@color/color_login_version"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/bnt_login_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:onClick="buttonOnclick"
+            android:text="@string/label_login_create_account"
+            android:textColor="@color/color_login_create_account"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/bnt_login_setting"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ugv2_login_setting_selector"
+            android:onClick="buttonOnclick" />
+    </RelativeLayout>
+
+</RelativeLayout>

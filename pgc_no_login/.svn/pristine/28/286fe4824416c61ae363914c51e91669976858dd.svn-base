@@ -1,0 +1,4 @@
+<resources>
+
+    <dimen name="ugv2_login_form_margin_top">200dip</dimen>
+</resources>

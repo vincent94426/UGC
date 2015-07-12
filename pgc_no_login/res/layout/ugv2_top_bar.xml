@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topBarBg"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ugv2_top_bg">
+
+    <ImageView
+        android:id="@+id/cancelBtn"
+        style="@style/ugv2_top_bar_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ugv2_top_cancel_selector"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/backBtn"
+        style="@style/ugv2_top_bar_btn"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ugv2_top_back_selector"/>
+    
+    <ImageView
+        android:id="@+id/selectBtn"
+        style="@style/ugv2_top_bar_btn"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ugv2_top_select_selector"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="@color/ugv2_top_title"
+        android:textSize="19sp" />
+    
+    
+</RelativeLayout>

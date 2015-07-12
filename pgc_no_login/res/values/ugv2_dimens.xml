@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- button -->
+    <dimen name="ugv2_button_size">18sp</dimen>
+    <dimen name="ugv2_button_padding_h">10dip</dimen>
+    <!-- list_base -->
+    <dimen name="ugv2_rgbtn_size">12sp</dimen>
+    <dimen name="ugv2_top_padding_h">15dip</dimen>
+    <dimen name="ugv2_top_padding_v">4dip</dimen>
+
+    <dimen name="metro_margin_left">12dp</dimen>
+    <dimen name="metro_margin_bottom">12dp</dimen>
+    <dimen name="metro_margin_right_btn">24dp</dimen>
+    <dimen name="metro_right_icon_bar_width">40dp</dimen>
+    <dimen name="metro_right_icon_width">40dp</dimen>
+    <dimen name="metro_item_text_font_size">11sp</dimen>
+    <dimen name="metro_item_text_font_size_small">10sp</dimen>
+    <style name="metro_right_icon">
+        <item name="android:padding">0dp</item>
+        <item name="android:clickable">true</item>
+    </style>
+    
+    <dimen name="ugv2_login_form_margin_top">200dip</dimen>
+    <dimen name="ugv2_pager_margin_top">0dip</dimen>
+    <dimen name="metro_item_bg_width">258.0dip</dimen>
+    <dimen name="metro_item_number_space">20.0dip</dimen>
+</resources>

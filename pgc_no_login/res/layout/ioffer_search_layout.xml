@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ic_ioffer_register_background" >
+
+    <RelativeLayout
+        android:id="@+id/add_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ioffer_top_bar_height"
+        android:background="@drawable/ic_ioffer_title_bar_bg" >
+
+        <TextView
+            android:id="@+id/bnt_search_back"
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/ic_ioffer_top_bar_back_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="buttonOnclick"
+            android:text="@string/ioffer_top_bar_back"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/ioffer_add_title"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/label_search_title"
+            android:textColor="@color/color_register_big_label"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_title_bar"
+        android:layout_marginTop="10dip"
+        android:background="@null" >
+
+        <ImageButton
+            android:id="@+id/bnt_search_go"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_ioffer_search_selector"
+            android:gravity="center"
+            android:onClick="buttonOnclick"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/edit_search_input"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@id/bnt_search_go"
+            android:background="@drawable/ic_ioffer_setting_auto_bg"
+            android:paddingLeft="5dip"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/search_layout"
+        android:layout_marginTop="10dip"
+        android:background="@null" >
+
+        <com.sobey.ioffer.ui.view.ContentTypeListView
+            android:id="@+id/search_content_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null" />
+
+        <ProgressBar
+            android:id="@+id/wait_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ugc_ic_ioffer_register_background" >
+
+    <RelativeLayout
+        android:id="@+id/ioffer_video_range_select__titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ugc_ioffer_top_bar_height"
+        android:background="@drawable/ugc_ic_ioffer_title_bar_bg" >
+
+        <TextView
+            android:id="@+id/ioffer_video_range_select_cancel"
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="2dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/ugc_ic_ioffer_top_bar_back_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="topBarOnClick"
+            android:text="@string/ugc_label_video_clip_bnt_cancel"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/ioffer_video_range_select_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/ugc_label_video_clip_title"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ioffer_video_range_select_complete"
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="2dp"
+            android:background="@drawable/ic_ioffer_top_bar_ok_high_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="topBarOnClick"
+            android:text="@string/ugc_label_video_clip_bnt_ok"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@null" >
+
+        <RelativeLayout
+            android:id="@+id/ioffer_video_range_selected_playview"
+            android:layout_width="fill_parent"
+            android:layout_height="180dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ugc_ic_ioffer_video_range_delect_image_bg"
+            android:clickable="true"
+            android:onClick="buttonOnClick" >
+
+            <SurfaceView
+                android:id="@+id/ioffer_video_clip_surface_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:layout_margin="3dp" />
+
+            <ImageView
+                android:id="@+id/ioffer_video_thumb"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="3dp"
+                android:background="#000000" />
+
+            <ImageView
+                android:id="@+id/ioffer_video_range_select_play"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ugc_ic_ioffer_video_range_selected_btn_play" />
+        </RelativeLayout>
+
+        <com.sobey.ioffer.upload.view.VideoRangeSelectBarView
+            android:id="@+id/ioffer_video_range_select_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/ugc_video_clip_height"
+            android:layout_below="@id/ioffer_video_range_selected_playview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp" />
+
+        <RelativeLayout
+            android:id="@+id/ioffer_video_range_select_group_start"
+            android:layout_width="140dp"
+            android:layout_height="90dp"
+            android:layout_alignLeft="@id/ioffer_video_range_selected_playview"
+            android:layout_below="@id/ioffer_video_range_select_bar"
+            android:layout_marginTop="15dp" >
+
+            <TextView
+                android:id="@+id/ioffer_video_start_time"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/ugc_ic_ioffer_video_start_top_bg"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/ioffer_video_start_time_reduce"
+                android:layout_width="70dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/ioffer_video_start_time"
+                android:background="@drawable/ugc_ic_ioffer_video_time_reduce_selector"
+                android:clickable="true"
+                android:onClick="timeOnClick" />
+
+            <TextView
+                android:id="@+id/ioffer_video_start_time_increase"
+                android:layout_width="70dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/ioffer_video_start_time"
+                android:layout_toRightOf="@id/ioffer_video_start_time_reduce"
+                android:background="@drawable/ugc_ic_ioffer_video_time_increse_selector"
+                android:clickable="true"
+                android:onClick="timeOnClick" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ioffer_video_range_select_group_end"
+            android:layout_width="140dp"
+            android:layout_height="90dp"
+            android:layout_alignRight="@+id/ioffer_video_range_selected_playview"
+            android:layout_below="@id/ioffer_video_range_select_bar"
+            android:layout_marginTop="15dp" >
+
+            <TextView
+                android:id="@+id/ioffer_video_end_time"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/ugc_ic_ioffer_video_start_top_bg"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/ioffer_video_end_time_reduce"
+                android:layout_width="70dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/ioffer_video_end_time"
+                android:background="@drawable/ugc_ic_ioffer_video_time_reduce_selector"
+                android:clickable="true"
+                android:onClick="timeOnClick" />
+
+            <TextView
+                android:id="@+id/ioffer_video_end_time_increase"
+                android:layout_width="70dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/ioffer_video_end_time"
+                android:layout_toRightOf="@id/ioffer_video_end_time_reduce"
+                android:background="@drawable/ugc_ic_ioffer_video_time_increse_selector"
+                android:clickable="true"
+                android:onClick="timeOnClick" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

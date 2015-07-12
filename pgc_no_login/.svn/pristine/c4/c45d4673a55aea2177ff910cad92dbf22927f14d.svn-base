@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PGC</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="login_app_name">iUGC 内容汇聚</string>
+
+    <!-- 菜单 -->
+    <string name="menu_change_user">切换用户</string>
+    <string name="menu_exit">退出</string>
+    <string name="menu_check_version">检测版本</string>
+    <string name="label_exit_application">确定要退出应用程序?</string>
+    <string name="label_error_check_version">检测版本错误!</string>
+    <string name="label_not_update_version">你当前为最新版本!</string>
+
+    <!-- 导航 -->
+    <string name="tab_menu_1">内容汇聚</string>
+    <string name="tab_menu_2">添加上传</string>
+    <string name="tab_menu_3">用户中心</string>
+    <string name="quit_application">再按一次退出程序</string>
+    <string name="table_label_title">内容汇聚</string>
+    <string name="table_label_hot">推荐</string>
+    <string name="table_label_rank">热门</string>
+    <string name="table_label_category">类别</string>
+    <string name="table_label_comments_suffix"> 条评论</string>
+    <string name="label_register_title_choice">选择图片来源</string>
+    <string name="label_bnt_video_size">设置</string>
+    <string name="label_setting_rate_title">码率设置</string>
+
+    <!-- 提示信息 -->
+    <string name="warring_hint_title">提示</string>
+    <string name="warring_hint_bnt_yes">确定</string>
+    <string name="label_new_version">新版本提示</string>
+    <string name="label_site_list">选择站点</string>
+    <string name="warring_hint_bnt_no">取消</string>
+    <string name="dialog_title">提示</string>
+    <string name="warring_login_failed">登录失败,请重试!</string>
+    <string name="dialog_request_service">请求服务,请稍等&#8230;&#8230;&#8230;</string>
+    <string name="warring_local_network_error">网络错误!</string>
+    <string name="warring_hint_web_setting">请在设置界面填写WEB服务器地址</string>
+    <string name="label_filter_cancel">取消</string>
+    <string name="label_filter_confirm">确认</string>
+    <string name="label_filter_title">视频筛选</string>
+    <string name="label_related_hint">暂时没有相关素材</string>
+    <string name="label_related_title">相关素材</string>
+    <string name="label_open_camera_failed">摄像头打开失败!</string>
+
+    <!-- 搜索 -->
+    <string name="label_search_title">全站搜索</string>
+    <string name="label_search_warring">请输入搜索关键字</string>
+
+    <!-- login -->
+    <string name="label_login_username">用户名</string>
+    <string name="label_login_password">密    码</string>
+    <string name="label_login_site_list">站    点</string>
+    <string name="label_bnt_login">确 定</string>
+    <string name="label_bnt_anonymity_login">匿名登录</string>
+    <string name="label_login_hint_site">选择站点</string>
+    <string name="label_login_version">版本 1.39</string>
+    <string name="label_login_hint_username">用户名</string>
+    <string name="label_login_hint_pwd">密码</string>
+    <string name="label_login_create_account">没有账户?</string>
+    <string name="warnning_login_input">请输入用户名</string>
+    <string name="warnning_login_site_invaild">请选择登录站点</string>
+    <string name="warnning_login_input_illegal">不能含有特殊字符: \\/:*?\"&lt;>|</string>
+    <string name="label_video_filter">筛选</string>
+    <string name="ioffer_top_bar_back">取消</string>
+    <string name="ioffer_top_bar_ok">完成</string>
+    <string name="ioffer_top_bar_about">简介</string>
+    <string name="label_query_site_failed">站点查询失败!</string>
+
+    <!-- setting -->
+    <string name="label_setting_title">设置</string>
+    <string name="label_setting_title_auto">跳过首页,自动登录</string>
+    <string name="label_setting_title_system">系统设置</string>
+    <string name="label_setting_title_record">录制设置</string>
+    <string name="label_setting_title_live">直播设置</string>
+    <string name="label_setting_title_custom">自定义</string>
+    <string name="label_setting_title_quality">视频质量</string>
+    <string name="label_setting_lock_password">锁定密码</string>
+    <string name="label_setting_service_address">服务器地址</string>
+    <string name="warring_setting_fill_webserver">请填写服务器地址</string>
+    <string name="label_setting_resolution">分辨率</string>
+    <string name="label_setting_rate">码率</string>
+    <string name="label_setting_low">低</string>
+    <string name="label_setting_middle">中</string>
+    <string name="label_setting_high">高</string>
+
+    <!-- 内容汇聚 -->
+    <string name="label_content_query_failed">查询失败</string>
+    <string name="label_content_load">点击查看更多&#8230;&#8230;&#8230;</string>
+    <string name="label_content_detail_back">返回</string>
+    <string name="label_content_more">相关推荐</string>
+    <string name="label_content_watch_free">免费</string>
+    <string name="label_content_watch_download">下载</string>
+    <string name="label_content_cmamount">条评论</string>
+    <string name="label_content_descibe">内容描述</string>
+    <string name="label_content_unkown">未知</string>
+    <string name="label_content_pubulishdate">发布时间：</string>
+    <string name="label_content_year">年</string>
+    <string name="label_content_month">月</string>
+    <string name="label_content_day">日</string>
+    <string name="label_content_detail_query_failed">内容获取失败</string>
+
+    <!-- 评论 -->
+    <string name="label_comment_edit">撰写评论</string>
+    <string name="label_comment_amount_add">条评论的平均分：</string>
+    <string name="label_comment_edit_cancel">取消</string>
+    <string name="label_comment_edit_subbmit_comment">提交评论</string>
+    <string name="label_comment_edit_send">发送</string>
+    <string name="label_comment_edit_rating_prompt">请按星级来打分</string>
+    <string name="label_comment_edit_title">标  题</string>
+    <string name="label_comment_edit_comment">评  论</string>
+    <string name="label_comment_edit_success">评论发表成功！</string>
+    <string name="label_comment_edit_failed">评论发表失败！</string>
+    <string name="label_comment_query_seccess">评论查询成功！</string>
+    <string name="label_comment_query_failed">评论查询失败！</string>
+    <string name="label_comment_item_comment">评价</string>
+    <string name="label_comment_edit_warring_title">标题不可为空</string>
+    <string name="label_comment_edit_warring_comment">评论不可为空</string>
+    <string name="label_comment_nextpage">下一页</string>
+
+    <!-- 图片预览 -->
+    <string name="label_preview_image_title">图片预览</string>
+    <string name="label_preview_image_back">返回</string>
+    <string name="label_preview_image_save">保存</string>
+    <string name="label_preview_image_download_failed">下载图片资源失败</string>
+    <string name="label_preview_image_plswait">请稍候</string>
+    <string name="label_preview_image_loading">数据获取中&#8230;&#8230;&#8230;</string>
+    <string name="label_preview_image_notfound">图片不存在</string>
+    <string name="label_preview_image_save_ok">图片保存成功</string>
+    <string name="label_preview_image_exist">图片已经存在</string>
+
+    <!-- 下载 -->
+    <string name="ugc_label_down_hint">添加成功</string>
+    <string name="ugc_label_down_exist">任务已经存在</string>
+
+    <!-- 添加上传 -->
+    <string name="ugc_label_add_title">添加上传</string>
+    <string name="ugc_label_add_title_file">任务设置</string>
+    <string name="ugc_label_add_bnt_file">文件上传</string>
+    <string name="ugc_label_add_bnt_live">直播上传</string>
+    <string name="ugc_title_select_audio">选择音频</string>
+    <string name="ugc_title_select_video">选择视频</string>
+    <string name="ugc_title_select_image">选择图片</string>
+    <string name="ugc_label_add_bnt_recorder">录制回传</string>
+    <string name="ugc_label_add_bnt_start">开始上传</string>
+    <string name="ugc_label_add_file_title">标  题</string>
+    <string name="ugc_label_add_file_description">描  述</string>
+    <string name="ugc_label_add_file_keyword">关键字</string>
+    <string name="ugc_label_add_file_first_level">一级分类</string>
+    <string name="ugc_label_add_file_second_level">二级分类</string>
+    <string name="ugc_label_add_file_path">上传文件</string>
+    <string name="ugc_label_comment_edit_warring_title">标题不可为空</string>
+    <string name="ugc_add_live_request_channel_failed">申请通道失败!</string>
+    <string name="ugc_add_file_connect_failed">服务器忙</string>
+    <string name="ugc_add_file_upload_failed">上传失败.请稍后再试</string>
+    <string name="ugc_add_file_upload_fnish_state">待审查</string>
+    <string name="ugc_warring_title">标题必填</string>
+    <string name="ugc_warring_title_length">标题文本长度必须大于3</string>
+    <string name="ugc_warring_category">请选择分类</string>
+    <string name="ugc_warring_path">未选择文件</string>
+    <string name="ugc_warring_recorder_path">未选择录制文件</string>
+
+    <!-- 直播上传 -->
+    <string name="ugc_label_add_live_title">标  题</string>
+    <string name="ugc_label_add_live_description">描  述</string>
+    <string name="ugc_label_add_live_from">直播来源</string>
+    <string name="ugc_label_add_live_location">直播地点</string>
+    <string name="ugc_label_add_live_master">主要人物</string>
+    <string name="ugc_label_live_error_metadata">元数据为空!</string>
+    <string name="ugc_label_live_error_encoder">编码器参数错误,请重新设置直播参数</string>
+
+    <!-- 录制上传 -->
+    <string name="ugc_label_add_recorder_title">标  题</string>
+    <string name="ugc_label_add_recorder_description">描  述</string>
+    <string name="ugc_label_add_recorder_from">视频来源</string>
+    <string name="ugc_label_add_recorder_location">视频地点</string>
+    <string name="ugc_label_add_recorder_master">录制视频</string>
+    <string name="ugc_bnt_add_recorder">开始上传</string>
+    <string name="ugc_label_add_recorder_error">录制参数错误,请重新设置录制参数</string>
+
+    <!-- 分类选择 -->
+    <string name="ugc_label_level_title_first">选择一级分类</string>
+    <string name="ugc_label_level_title_second">选择二级分类</string>
+    <string name="ugc_label_level_first_hint">请选择一级分类</string>
+    <string name="ugc_label_level_first_empty">当前分类没有子分类</string>
+    <string name="ugc_label_level_catalog_empty">分类为空,是否重新查询?</string>
+    <string name="ugc_label_level_catalog_failed">分类查询失败,是否重新查询?</string>
+    <string name="ugc_label_level_bnt_back">选择</string>
+    <string name="ugc_label_level_fun">娱乐</string>
+    <string name="ugc_label_level_other">其他</string>
+
+    <!-- upload -->
+    <string name="ugc_label_upload_title">内容管理</string>
+    <string name="ugc_label_upload_manager">管理</string>
+    <string name="ugc_label_download_title">下载管理</string>
+    <string name="ugc_label_upload_add_succeed">添加成功</string>
+    <string name="ugc_label_upload_back">返回</string>
+    <string name="ugc_label_upload_edit">编辑</string>
+    <string name="ugc_label_upload_edit_finish">完成</string>
+    <string name="ugc_label_task_init">等待</string>
+    <string name="ugc_label_task_complete">完成</string>
+    <string name="ugc_label_task_verify">等待验证</string>
+    <string name="ugc_label_task_progress"> 上传进度:</string>
+    <string name="ugc_label_task_connect_error">连接服务器失败</string>
+    <string name="ugc_label_task_live_speed">KB/s</string>
+    <string name="ugc_label_task_disconnect">Disconnect</string>
+    <string name="ugc_label_task_connecting">正在连接,请稍等&#8230;&#8230;&#8230;</string>
+    <string name="ugc_label_task_live_ks">你的信号已经被服务器踢出.</string>
+    <string name="ugc_label_check_live_encoder">正在初始化编码器,请稍等&#8230;&#8230;&#8230;</string>
+    <string name="ugc_label_live_soft">本设备仅仅支持软件编码.</string>
+    <string name="ugc_label_task_network_error">网络错误!</string>
+    <string name="ugc_label_task_not_preview">不支持格式预览</string>
+
+    <!-- popup menu -->
+    <string name="ugc_popup_menu_video">视频</string>
+    <string name="ugc_popup_menu_audio">音频</string>
+    <string name="ugc_popup_menu_image">图片</string>
+    <string name="ugc_popup_menu_record">照相机</string>
+    <string name="ugc_popup_menu_cancel">取消</string>
+
+    <!-- 提示信息 -->
+    <string name="ugc_warring_hint_title">提示</string>
+    <string name="ugc_warring_hint_bnt_yes">确定</string>
+    <string name="ugc_warring_hint_bnt_no">取消</string>
+    <string name="ugc_warring_login_failed">登录失败,请重试!</string>
+    <string name="ugc_warring_local_network_error">网络错误!</string>
+    <string name="ugc_warring_hint_web_setting">请在设置界面填写WEB服务器地址</string>
+    <string name="ugc_warring_hint_no_type_info">当前用户没有栏目信息!</string>
+
+    <!-- 视频裁剪 -->
+    <string name="ugc_label_video_clip_bnt_cancel">取消</string>
+    <string name="ugc_label_video_clip_bnt_ok">确定</string>
+    <string name="ugc_label_video_clip_bnt_clip">裁剪</string>
+    <string name="ugc_label_video_clip_title">视频裁剪</string>
+    <string name="ugc_label_video_init_error">视频初始化失败!</string>
+    <string name="ugc_label_video_add_task">添加新任务</string>
+    <string name="ugc_label_video_range_select_complete">完成</string>
+    <string name="ugc_label_video_range_select_start">开始:</string>
+    <string name="ugc_label_video_range_select_end">结束:</string>
+    <string name="ugc_label_video_cliping">视频裁剪中&#8230;&#8230;&#8230;</string>
+    <string name="ugc_label_video_clip_failed">视频裁剪失败</string>
+    <string name="ugc_label_video_cliping_progress">裁剪进度: </string>
+    <string name="ugc_label_video_not_clip">不需要裁剪视频 ?</string>
+
+    <!-- 用户中心 -->
+    <string name="label_user_title">用户中心</string>
+    <string name="label_user_bnt_edit">编辑</string>
+    <string name="label_user_bnt_logout">注销</string>
+    <string name="label_user_upload">上传</string>
+    <string name="label_user_download">下载</string>
+    <string name="label_user_logout_failed">注销失败</string>
+    <string name="label_user_enum_failed">用户信息查询失败!</string>
+
+    <string-array name="register_icon_choice">
+        <item>相册</item>
+        <item>相机</item>
+    </string-array>
+
+    <!-- 编辑用户 -->
+    <string name="label_edit_user_title">用户修改</string>
+    <string name="label_edit_user_info_title">信息修改</string>
+    <string name="label_edit_user_pwd_title">密码设置</string>
+    <string name="label_edit_user_modify_icon">修改照片</string>
+    <string name="label_edit_user_modify_email">电子邮箱</string>
+    <string name="label_edit_user_modify_phone">手机号码</string>
+    <string name="label_edit_user_modify_o_pwd">原密码</string>
+    <string name="label_edit_user_modify_n_pwd">新密码</string>
+    <string name="label_edit_user_modify_c_pwd">确认密码</string>
+    <string name="edit_user_old_pwd_wrong">旧密码错误,请重新输入</string>
+    <string name="edit_user_c_pwd_wrong">两次输入密码不同,请重新输入</string>
+    <string name="edit_user_success">修改成功</string>
+
+    <!-- 注册 -->
+    <string name="label_register_title">创建新账户</string>
+    <string name="label_register_requisite">必填信息</string>
+    <string name="label_register_choice">选择信息</string>
+    <string name="label_register_username">用户名</string>
+    <string name="label_register_nickname">昵  称</string>
+    <string name="label_register_password">密  码</string>
+    <string name="label_register_confirm">验  证</string>
+    <string name="label_register_email">电子邮箱</string>
+    <string name="label_register_phone">电话号码</string>
+    <string name="label_register_hint_uname">登录时用的名称</string>
+    <string name="label_register_hint_nickname">别人看到的名字</string>
+    <string name="label_register_hint_pwd">必填</string>
+    <string name="label_register_hint_confirm">重新输入密码</string>
+    <string name="label_register_add_icon">添加照片</string>
+    <string name="register_fill_username">用户名长度4&#8211;20个字符</string>
+    <string name="register_fill_nickname">昵称长度4&#8211;20个字符</string>
+    <string name="register_fill_password">密码长度6&#8211;20个字符</string>
+    <string name="register_email_wrong">电子邮箱格式错误</string>
+    <string name="register_confirm_wrong">两次输入密码不同,请重新输入</string>
+    <string name="register_success">注册成功</string>
+    <string name="label_register_web_error">请设置服务器地址</string>
+
+</resources>

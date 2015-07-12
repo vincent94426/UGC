@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="ugv2_app_name">PGC</string>
+    <string name="ugv2_txt_top_manage_task">任务管理</string>
+    <string name="ugv2_txt_top_setting">设置</string>
+    
+    <string name="ugv2_txt_main_tab_record">录像</string>
+    <string name="ugv2_txt_main_tab_file">文件</string>
+    
+    <string name="ugv2_txt_main_label_title">标题</string>
+    <string name="ugv2_txt_main_label_description">描述</string>
+    <string name="ugv2_txt_main_label_category">分类</string>
+    <string name="ugv2_txt_main_label_record">拍摄视频</string>
+    <string name="ugv2_txt_main_label_select_file">选择文件</string>
+    <string name="ugv2_txt_main_btn_upload">立即上传</string>
+    <string name="ugv2_txt_setting_btn_confirm">保存</string>
+    
+    <!-- module -->
+    <string name="ugv2_module_text_video">视频</string>
+    <string name="ugv2_module_text_camera_video">录制视频</string>
+    <string name="ugv2_module_text_image">图片</string>
+    <string name="ugv2_module_text_camera_image">拍照</string>
+    <string name="ugv2_module_text_audio">音频</string>
+    <string name="ugv2_module_text_setting">系统设置</string>
+    <string name="ugv2_module_text_task">上传任务管理</string>
+    
+    <!-- setting -->
+    <string name="ugv2_txt_setting_portrait">头像</string>
+    <string name="ugv2_txt_setting_username">用户名</string>
+    <string name="ugv2_txt_setting_nickname">昵称</string>
+    
+    <string name="ugv2_txt_setting_email">邮箱</string>
+    <string name="ugv2_txt_setting_phone">手机号</string>
+    
+    <string name="ugv2_txt_setting_server_addr">服务地址</string>
+    <string name="ugv2_txt_setting_size">录制分辨率</string>
+    <string name="ugv2_txt_setting_bitrate">录制比特率</string>
+    <string name="ugv2_txt_setting_version">当前版本</string>
+    
+    <string name="ugv2_txt_setting_logout">登出当前账号</string>
+    
+    <string name="ugv2_txt_task_delete">删除</string>
+    <string name="ugv2_txt_task_wait">等待</string>
+    <string name="ugv2_txt_task_stop">暂停</string>
+    <string name="ugv2_txt_task_failed">失败</string>
+    <string name="ugv2_txt_task_finish">完成</string>
+    
+    <string name="ugv2_txt_media_audio">音频</string>
+    
+    <string name="ugv2_txt_msg_error_param">参数错误</string>
+    
+    <string name="ugv2_txt_title_navigation">新闻回传终端</string>
+    <string name="ugv2_txt_title_main">新建任务</string>
+    <string name="ugv2_txt_title_task">任务列表</string>
+    <string name="ugv2_txt_title_setting">设置</string>
+    
+    <!-- metro main ui -->
+    <string name="module_text_contact">通讯录</string>
+    <string name="module_text_onekey_sync">全同步</string>
+    <string name="module_text_onekey_sync_desc">上传手机资料</string>
+    
+    <string name="metro_module_contact">通讯录备份</string>
+    <string name="metro_module_sms">短信备份</string>
+    <string name="metro_module_mms">彩信备份</string>
+    <string name="metro_module_calllog">通话记录备份</string>
+    <string name="metro_module_photo">相片备份</string>
+    <string name="metro_module_app">应用备份</string>
+    <string name="metro_module_doc">文档备份</string>
+    <string name="metro_module_sync">全备份</string>
+    <string name="error_no_sdcard">请插入SD卡</string>
+     <string name="lesync_common_top_bar_left_button">返回</string>
+     
+    <string name="video_preview_page_title">视屏预览</string>
+    <string name="picture_preview_page_title">图片预览</string>
+</resources>

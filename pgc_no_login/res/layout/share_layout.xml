@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="#EEEEEE"
+    android:paddingBottom="15dip" >
+
+    <TextView
+        android:id="@+id/shared_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dip"
+        android:layout_marginTop="10dip"
+        android:text="请选择:"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="fill_parent"
+        android:layout_height="4px"
+        android:layout_below="@id/shared_title"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="8dip"
+        android:background="@drawable/base_action_bar_dropdown_list_divider" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_1"
+        android:layout_marginTop="15dip" >
+
+        <LinearLayout
+            android:id="@+id/group_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</RelativeLayout>

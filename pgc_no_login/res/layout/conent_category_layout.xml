@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@null">
+
+    <!-- 视频 -->
+
+    <RelativeLayout
+        android:id="@+id/content_category_video_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_ioffer_content_type_selector"
+        android:clickable="true"
+        android:onClick="buttonOnclick" >
+
+        <ImageView
+            android:id="@+id/user_icon"
+            android:layout_width="61dp"
+            android:layout_height="47dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_ioffer_content_category_v_icon" />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/user_icon"
+            android:text="视频"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/bnt_edit_user"
+            android:layout_width="10dp"
+            android:layout_height="13dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/ic_ioffer_user_arrow" />
+    </RelativeLayout>
+
+    <!-- 音频 -->
+
+    <RelativeLayout
+        android:id="@+id/content_category_audio_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/content_category_video_layout"
+        android:background="@drawable/ic_ioffer_content_type_selector"
+        android:clickable="true"
+        android:onClick="buttonOnclick" >
+
+        <ImageView
+            android:id="@+id/user_icon1"
+            android:layout_width="61dp"
+            android:layout_height="47dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_ioffer_content_category_a_icon" />
+
+        <TextView
+            android:id="@+id/tv_user_name1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/user_icon1"
+            android:text="音频"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/bnt_edit_user1"
+            android:layout_width="10dp"
+            android:layout_height="13dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/ic_ioffer_user_arrow" />
+    </RelativeLayout>
+
+    <!-- 图文 -->
+
+    <RelativeLayout
+        android:id="@+id/content_category_img_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/content_category_audio_layout"
+        android:background="@drawable/ic_ioffer_content_type_selector"
+        android:clickable="true"
+        android:onClick="buttonOnclick" >
+
+        <ImageView
+            android:id="@+id/user_icon2"
+            android:layout_width="61dp"
+            android:layout_height="47dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_ioffer_content_category_i_icon" />
+
+        <TextView
+            android:id="@+id/tv_user_name2"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/user_icon2"
+            android:text="图片"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/bnt_edit_user2"
+            android:layout_width="10dp"
+            android:layout_height="13dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/ic_ioffer_user_arrow" />
+    </RelativeLayout>
+
+</RelativeLayout>

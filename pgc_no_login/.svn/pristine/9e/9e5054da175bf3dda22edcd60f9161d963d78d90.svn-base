@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ugc_ic_ioffer_register_background"
+    android:paddingBottom="5dp" >
+
+    <RelativeLayout
+        android:id="@+id/add_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ugc_ioffer_top_bar_height"
+        android:background="@drawable/ugc_ic_ioffer_title_bar_bg" >
+
+        <TextView
+            android:id="@+id/bnt_upload_manager"
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/ugc_ic_ioffer_top_bar_ok_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="buttonOnclick"
+            android:text="@string/ugc_label_upload_manager"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/ioffer_add_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Ioffer Title"
+            android:textColor="@color/ugc_color_register_big_label"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/bnt_upload_setting"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/ugc_ic_ioffer_setting_selector"
+            android:gravity="center"
+            android:onClick="buttonOnclick"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <!-- 添加类型选择 -->
+
+    <LinearLayout
+        android:id="@+id/add_bnt_choice_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ugc_ioffer_add_upload_height"
+        android:layout_below="@id/add_title_bar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <Button
+            android:id="@+id/bnt_add_file"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ugc_ic_ioffer_setting_quality_low_selected"
+            android:onClick="buttonOnclick"
+            android:text="@string/ugc_label_add_bnt_file"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/bnt_add_recorder"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ugc_ic_ioffer_setting_quality_high_default"
+            android:onClick="buttonOnclick"
+            android:text="@string/ugc_label_add_bnt_recorder"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/bnt_add_live"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ugc_ic_ioffer_setting_quality_high_default"
+            android:onClick="buttonOnclick"
+            android:text="@string/ugc_label_add_bnt_live"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- 大标题 -->
+
+    <TextView
+        android:id="@+id/add_big_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/add_bnt_choice_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/ugc_label_add_title_file"
+        android:textColor="@color/ugc_color_register_big_label"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/bnt_ugc_add_upload_start"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ugc_ioffer_button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/ugc_ic_ioffer_bnt_selector"
+        android:onClick="buttonOnclick"
+        android:text="@string/ugc_label_add_bnt_start"
+        android:textColor="@color/ugc_color_add_start_bnt"
+        android:textSize="18sp" />
+
+    <!-- 元数据输入区域 -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bnt_ugc_add_upload_start"
+        android:layout_below="@id/add_big_title"
+        android:layout_margin="10dip" >
+
+        <FrameLayout
+            android:id="@+id/add_content_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+</RelativeLayout>

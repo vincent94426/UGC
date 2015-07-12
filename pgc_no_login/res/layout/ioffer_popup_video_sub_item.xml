@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ioffer_video_filter_item_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#88000000" >
+
+    <RelativeLayout
+        android:id="@+id/filter_layout_2"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_ioffer_video_filter_s_bg" >
+
+        <TextView
+            android:id="@+id/video_catalog_sub_title"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/filter_layout_1"
+            android:layout_marginLeft="41dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="民族歌曲"
+            android:textColor="#FC9702"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/video_catalog_item_choice"
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/filter_layout_1"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp" 
+            android:background="@drawable/ic_ioffer_video_filter_choice"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/ugv2_bg_gray"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lesync_common_fragment_content"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/ugv2_bg_gray"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/fragment_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="80dip"
+            android:background="@drawable/fragment_bottom_bitmap"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fragment_bottom_text" />
+        </LinearLayout>
+
+    </RelativeLayout>
+    
+        <ImageView
+            android:id="@+id/fragment_bottom_sawtooth"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/fragment_bottom"
+            android:padding="-1dip"
+            android:background="@drawable/fragment_bottom_sawtooth_bitmap" />
+
+</LinearLayout>

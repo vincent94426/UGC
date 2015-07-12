@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ic_ioffer_register_background" >
+
+    <include
+        android:id="@+id/top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ioffer_top_bar_height"
+        layout="@layout/ioffer_title_bar_layout" />
+
+    <TextView
+        android:id="@+id/register_requisite"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_bar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/label_register_requisite"
+        android:textColor="@color/color_register_big_label"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- uname -->
+
+    <LinearLayout
+        android:id="@+id/username_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/register_requisite"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" >
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ic_ioffer_input_lable_h_gb" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:focusable="false"
+                android:singleLine="true"
+                android:text="@string/label_register_username"
+                android:textColor="@color/color_register_normal_label"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ic_ioffer_input_edit_h_gb" >
+
+            <EditText
+                android:id="@+id/edit_register_username"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:hint="@string/label_register_hint_uname"
+                android:maxLength="50"
+                android:singleLine="true"
+                android:textColor="@color/color_register_input"
+                android:textSize="20sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/divide_1"
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:layout_below="@id/username_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/ic_ioffer_divide_line"
+        android:singleLine="true" />
+
+    <!-- nickname -->
+
+    <LinearLayout
+        android:id="@+id/nickname_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/divide_1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ic_ioffer_input_lable_m_gb" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:focusable="false"
+                android:singleLine="true"
+                android:text="@string/label_register_nickname"
+                android:textColor="@color/color_register_normal_label"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ic_ioffer_input_edit_m_gb" >
+
+            <EditText
+                android:id="@+id/edit_register_nickname"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:hint="@string/label_register_hint_nickname"
+                android:maxLength="50"
+                android:singleLine="true"
+                android:textColor="@color/color_register_input"
+                android:textSize="20sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/divide_2"
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:layout_below="@id/nickname_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/ic_ioffer_divide_line"
+        android:singleLine="true" />
+
+    <!-- password -->
+
+    <LinearLayout
+        android:id="@+id/password_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/divide_2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ic_ioffer_input_lable_m_gb" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:focusable="false"
+                android:singleLine="true"
+                android:text="@string/label_register_password"
+                android:textColor="@color/color_register_normal_label"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ic_ioffer_input_edit_m_gb" >
+
+            <EditText
+                android:id="@+id/edit_register_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:hint="@string/label_register_hint_pwd"
+                android:maxLength="50"
+                android:password="true"
+                android:singleLine="true"
+                android:textColor="@color/color_register_input"
+                android:textSize="20sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/divide_3"
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:layout_below="@id/password_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/ic_ioffer_divide_line"
+        android:singleLine="true" />
+
+    <!-- confirm -->
+
+    <LinearLayout
+        android:id="@+id/confirm_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/divide_3"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ic_ioffer_input_lable_e_gb" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:focusable="false"
+                android:singleLine="true"
+                android:text="@string/label_register_confirm"
+                android:textColor="@color/color_register_normal_label"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ic_ioffer_input_edit_e_gb" >
+
+            <EditText
+                android:id="@+id/edit_register_confirm"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:hint="@string/label_register_hint_confirm"
+                android:maxLength="50"
+                android:password="true"
+                android:singleLine="true"
+                android:textColor="@color/color_register_input"
+                android:textSize="20sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/register_choice"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/confirm_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/label_register_choice"
+        android:textColor="@color/color_register_big_label"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- email -->
+
+    <RelativeLayout
+        android:id="@+id/register_user_icon"
+        android:layout_width="74dp"
+        android:layout_height="94dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/register_choice"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_ioffer_user_portrait_selector"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+        android:onClick="buttonOnclick"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/register_user_icon_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="10dip"
+            android:src="@drawable/ic_ioffer_register_user_default_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="2dip"
+            android:lines="1"
+            android:text="@string/label_edit_user_modify_icon"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/email_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/register_choice"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@id/register_user_icon" >
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ic_ioffer_input_lable_h_gb" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:focusable="false"
+                android:singleLine="true"
+                android:text="@string/label_register_email"
+                android:textColor="@color/color_register_normal_label"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ic_ioffer_input_edit_h_gb" >
+
+            <EditText
+                android:id="@+id/edit_register_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:inputType="textEmailAddress"
+                android:maxLength="50"
+                android:singleLine="true"
+                android:textColor="@color/color_register_input"
+                android:textSize="20sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/divide_4"
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:layout_alignRight="@id/email_layout"
+        android:layout_below="@id/email_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/ic_ioffer_divide_line"
+        android:singleLine="true" />
+
+    <!-- nickname -->
+
+    <LinearLayout
+        android:id="@+id/phone_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignRight="@id/email_layout"
+        android:layout_below="@id/divide_4"
+        android:layout_marginLeft="10dp" >
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ic_ioffer_input_lable_e_gb" >
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="4dp"
+                android:focusable="false"
+                android:singleLine="true"
+                android:text="@string/label_register_phone"
+                android:textColor="@color/color_register_normal_label"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ic_ioffer_input_edit_e_gb" >
+
+            <EditText
+                android:id="@+id/edit_register_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:inputType="phone"
+                android:maxLength="50"
+                android:singleLine="true"
+                android:textColor="@color/color_register_input"
+                android:textSize="20sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ugc_ic_ioffer_register_background" >
+
+    <RelativeLayout
+        android:id="@+id/add_title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/ugc_ioffer_top_bar_height"
+        android:background="@drawable/ugc_ic_ioffer_title_bar_bg" >
+
+        <TextView
+            android:id="@+id/ioffer_select_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/ugc_title_select_audio"
+            android:textColor="@color/ugc_color_register_big_label"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/selectaudio_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/add_title_bar" >
+    </ListView>
+
+</RelativeLayout>

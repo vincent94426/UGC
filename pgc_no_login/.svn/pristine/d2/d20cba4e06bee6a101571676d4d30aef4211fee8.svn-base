@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/ic_ioffer_background" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_ioffer_player_topbar" >
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/ic_ioffer_content_category_a_icon" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/play_audio_music_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="Ioffer Play Audio"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/play_audio_prog"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/play_audio_music_name"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="0%"
+        android:textColor="#ffffff"
+        android:textSize="14sp" 
+        android:visibility="visible"/>
+    
+    <SeekBar
+        android:id="@+id/play_audio_progress_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <TextView
+        android:id="@+id/play_audio_current_time"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/play_audio_progress_bar"
+        android:layout_alignLeft="@id/play_audio_progress_bar"
+        android:text="00:00"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/play_audio_total_time"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/play_audio_progress_bar"
+        android:layout_alignRight="@id/play_audio_progress_bar"
+        android:gravity="right"
+        android:text="00:00"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+    <ImageButton
+        android:id="@+id/play_audio_button"
+        android:layout_width="47dp"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/ic_ioffer_play_button_selector"
+        android:onClick="buttonOnclick" />
+
+</RelativeLayout>
