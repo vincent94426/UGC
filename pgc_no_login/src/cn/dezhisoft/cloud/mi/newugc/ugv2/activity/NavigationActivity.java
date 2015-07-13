@@ -37,6 +37,8 @@ import cn.dezhisoft.cloud.mi.newugc.ugc.core.upload.UGCUploadFileService;
 import cn.dezhisoft.cloud.mi.newugc.ugc.version.VersionListener;
 import cn.dezhisoft.cloud.mi.newugc.ugc.version.VersionManager;
 import cn.dezhisoft.cloud.mi.newugc.ugv2.base.activity.BaseActivity;
+import cn.dezhisoft.cloud.mi.newugc.ugv2.chat.common.tran.bean.TranObject;
+import cn.dezhisoft.cloud.mi.newugc.ugv2.chat.common.util.Constants;
 import cn.dezhisoft.cloud.mi.newugc.ugv2.constants.UgV2Constants;
 import cn.dezhisoft.cloud.mi.newugc.ugv2.view.metro.view.AutoFillMetroView;
 import cn.dezhisoft.cloud.mi.newugc.ugv2.view.metro.view.MetroItemView;
@@ -245,9 +247,9 @@ public class NavigationActivity extends BaseActivity{
 					}else if(R.drawable.ugv2_navigation_record_video == v.getId()){
 						captureVideo();
 					}else if(R.drawable.ugv2_navigation_talk == v.getId()){
-						Intent intent = new Intent(NavigationActivity.this, MyFriendList.class);
-						System.out.print("uy");
-						intent.putExtra("id", "1");//  ************
+						TranObject msg = (TranObject) getIntent().getSerializableExtra(Constants.MSGKEY);
+						Intent intent = new Intent(NavigationActivity.this, FriendListActivity.class);
+						intent.putExtra(Constants.MSGKEY, msg);
 						startActivity(intent);
 					}
 					break;

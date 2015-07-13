@@ -98,17 +98,18 @@
                 android:textColor="@color/color_login_bnt_text"
                 android:textSize="18sp" />
 
-            <CheckBox
-                android:id="@+id/checkpassword"
-                 android:button="@drawable/login_checkbox_style"
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/ugv2_register_btn"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
-                android:checked="true"
-                android:paddingLeft="20dp"
+                android:paddingLeft="5dp"
                 android:layout_marginLeft="50dp"
-                android:text="记住密码" />
+                android:background="@drawable/ugv2_login_ok_btn_selector"
+                android:textColor="@color/color_login_bnt_text"
+                android:textSize="18sp"
+                android:text="注册" />
         </RelativeLayout>
     </LinearLayout>
 

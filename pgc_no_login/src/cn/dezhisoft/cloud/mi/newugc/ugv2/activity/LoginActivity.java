@@ -3,18 +3,28 @@ package cn.dezhisoft.cloud.mi.newugc.ugv2.activity;
 import com.baidu.mobstat.StatService;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import javax.security.auth.PrivateCredentialPermission;
+
+import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AlertDialog;
+import android.app.Application;
 import android.app.AlertDialog.Builder;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.StrictMode;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
@@ -38,18 +48,26 @@ import cn.dezhisoft.cloud.mi.newugc.ugc.model.Site;
 import cn.dezhisoft.cloud.mi.newugc.ugc.ws.SoapResponse;
 import cn.dezhisoft.cloud.mi.newugc.ugc.ws.UGCWebService;
 import cn.dezhisoft.cloud.mi.newugc.ugv2.base.activity.AbstractBuzzActivity;
+import cn.dezhisoft.cloud.mi.newugc.ugv2.chat.common.bean.User;
+import cn.dezhisoft.cloud.mi.newugc.ugv2.chat.common.tran.bean.TranObject;
+import cn.dezhisoft.cloud.mi.newugc.ugv2.chat.common.tran.bean.TranObjectType;
+import cn.dezhisoft.cloud.mi.newugc.ugv2.chat.common.util.Constants;
+import cn.dezhisoft.cloud.mi.newugc.ugv2.client.Client;
+import cn.dezhisoft.cloud.mi.newugc.ugv2.client.ClientOutputThread;
+import cn.dezhisoft.cloud.mi.newugc.ugv2.utils.DialogFactory;
+import cn.dezhisoft.cloud.mi.newugc.ugv2.utils.SharePreferenceUtil;
+import cn.dezhisoft.cloud.mi.newugc.ugv2.utils.UserDB;
 
 /**
  * 
  * @author Rosson Chen
  *
  */
-public final class LoginActivity extends AbstractBuzzActivity {
+public final class LoginActivity extends MyActivity implements OnClickListener {
 
-	EditText userName , password;
+	EditText e_userName , e_password;
 	Spinner siteSpinner ;
-	String uname,upwd ;
-	Button loginBtn, settingBtn;
+	Button loginBtn, registerBtn;
 	
 	ArrayList<Site> list ;
 	String[] siteNameList ;
@@ -59,315 +77,172 @@ public final class LoginActivity extends AbstractBuzzActivity {
 	AlertDialog dialog ;
 	
 	AppConfig config ;
+	private MyApplication application;
 	
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectDiskReads().detectDiskWrites().detectNetwork().penaltyLog().build());
+        StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder().detectLeakedSqlLiteObjects().detectLeakedClosableObjects().penaltyLog().penaltyDeath().build());
 		setContentView(R.layout.ugv2_login_layout);
-		//
-		userName = (EditText) findViewById(R.id.ugv2_login_username);
-		password = (EditText) findViewById(R.id.ugv2_login_password);
+		application=(MyApplication)this.getApplicationContext();
+		e_userName = (EditText) findViewById(R.id.ugv2_login_username);
+		e_password = (EditText) findViewById(R.id.ugv2_login_password);
 		siteSpinner = (Spinner) findViewById(R.id.ugv2_login_site);
 		loginBtn = (Button) findViewById(R.id.ugv2_login_btn);
-		settingBtn = (Button) findViewById(R.id.ugv2_login_setting);
+		registerBtn = (Button) findViewById(R.id.ugv2_register_btn);
 		
-		oldWeb	= null ;
-		loginBtn.setOnClickListener(onclickListener);
-		settingBtn.setOnClickListener(onclickListener);
+		loginBtn.setOnClickListener(this);
+		registerBtn.setOnClickListener(this);
 		
 		list = new ArrayList<Site>();
 		list.add(new Site());
 		list.add(new Site());
 		list.add(new Site());
 		siteNameList = new String[] {"测试站点1","测试站点2","测试站点3",};
-		
-		UGCWebService.setDebug(true);
 	}
 	
 	@Override
-	protected Handler getMessageHandler() {
-		return new Handler(){
-
-			@Override
-			public void handleMessage(Message msg) {
-				switch(msg.what){
-				case SoapResponse.SoapRequestMessage.MSG_START_SOAP :
-					showDialog(DIALOG_ID_REQUEST);
-					break ;
-				case SoapResponse.SoapRequestMessage.MSG_END_SOAP :
-					dismissDialog(DIALOG_ID_REQUEST);
-					break ;
-				case IofferDefine.MSG_USER_LOGIN_SUCCESS :
-					// auto login
-					mAccessDatabase.updateAutoLoginUser(true,uname,upwd);
-					// open check version
-					mAccessDatabase.updateCheckVersion(Config.FLGA_BUTTON_ON);
-					// go home activity
-					switchHomeActivity() ;
-					break ;
-				case IofferDefine.MSG_USER_LOGIN_FAILED :
-					String text = "" ;
-					if(msg.obj instanceof ErrorMessage){
-						text = ((ErrorMessage)msg.obj).getMessage();
-					} else {
-						text = msg.obj != null ? msg.obj.toString() : "Login Error." ;
-					}
-					showMessageDialog(text);
-					break ;
-				case IofferDefine.MSG_QUERY_SITE_SUCCESS :
-					
-					list = mIofferService.getSiteList() ;
-					int size = list.size() ;
-					
-					if(size == 0){
-						showMessageDialog(getString(R.string.label_query_site_failed));
-						return ;
-					}
-					
-					oldWeb	= config.getHost() ;
-					
-					siteNameList = new String[size];
-					for(int i = 0 ; i < size ; i++){
-						siteNameList[i] = list.get(i).getSiteName() ;
-					}
-					
-					showSiteListDialog() ;
-					break ;
-				case IofferDefine.MSG_QUERY_SITE_FAILED :
-					showMessageDialog(getString(R.string.label_query_site_failed));
-					break ;
-				}
-			}
-			
-		};
-	}
-
-	protected void switchHomeActivity() {
-		Intent homeIntent = new Intent(this.getApplicationContext(), NavigationActivity.class);
-		startActivity(homeIntent);
-		finish();
-	}
-
-	@Override
-	protected void onResume() {
+	protected void onResume() {// 在onResume方法里面先判断网络是否可用，再启动服务,这样在打开网络连接之后返回当前Activity时，会重新启动服务联网，
 		super.onResume();
-		
-		setDefaultSite();
-		Log.i("baidu", "baidu 统计 resume");
-		StatService.onResume(this);
-	}
-	@Override
-	protected void onPause() {
-	    // TODO Auto-generated method stub
-	    super.onPause();
-	    Log.i("baidu", "baidu 统计 pause");
-	    StatService.onPause(this);
-	}
-
-	private void setDefaultSite() {
-		config		= mAccessDatabase.getConfig() ;
-		siteId 		= config.getSiteId() ;
-		siteName	= config.getSiteName() ;
-		
-		// 第一次
-		if(oldWeb == null)
-			oldWeb = config.getHost() ;
-		
-		if(config.getAuto() == 1){
-			userName.setText(config.getName());
-			password.setText(config.getPassword());
+		if (isNetworkAvailable()) {
+			Intent service = new Intent(this, GetMsgService.class);
+			startService(service);
 		} else {
-			userName.setText("");
-			password.setText("");
+			toast(this);
 		}
-		// 设置站点名称
-		//siteTextview.setText(siteName);
-		initSitesList();
 	}
 	
-	private OnClickListener onclickListener = new OnClickListener() {
+	public void onClick(View v){
+		switch(v.getId()){
+		case R.id.ugv2_login_btn:
+			login();
+			break;
+		case R.id.ugv2_register_btn:
+			goRegisterActivity();
+			break;
+		default:break;
+		}
+	}
+	public void goRegisterActivity(){
+		Intent intent=new Intent();
+		intent.setClass(this, RegisterActivity.class);
+		startActivity(intent);
+	}
+	private Dialog mDialog=null;
+	private void showRequestDialog(){
+		if(mDialog!=null){
+			mDialog.dismiss();
+			mDialog=null;
+		}
+		mDialog=DialogFactory.creatRequestDialog(this, "正在验证账号...");
+		mDialog.show();
+	}
+	private void login(){
+		String id=e_userName.getText().toString().trim();
+		String password=e_password.getText().toString().trim();
+		if(id.length()==0||password.length()==0){
+			DialogFactory.ToastDialog(this, "Login", "亲！账号或密码不能为空欧");
+		}else{
+			showRequestDialog();
+			//通过socket验证信息
+			if(application.isClientStart()){
+				Client client =application.getClient();
+				ClientOutputThread out=client.getClientOutputThread();
+				TranObject<User> o=new TranObject<User>(TranObjectType.LOGIN);
+				User u=new User();
+				u.setId(Integer.parseInt(id));
+				u.setPassword(password);
+				o.setObject(u);
+				out.setMsg(o);
+			}else{
+				if(mDialog.isShowing())
+					mDialog.dismiss();
+				DialogFactory.ToastDialog(LoginActivity.this, "Login", "亲，服务器暂未开放服务欧");
+			}
+		}
+	}
+	
+	
+	 //依据自己需求处理父类广播接收者收取到的消息
+	public void getMessage(TranObject msg) {
+		if (msg != null) {
+			System.out.println("Login:" + msg);
+			switch (msg.getType()) {
+			case LOGIN:// LoginActivity只处理登录的消息
+				List<User> list = (List<User>) msg.getObject();
+				//TODO 此处的list代表这个人的好友列表
+				if (list!=null&&list.size() > 0) {
+					// 保存用户信息
+					SharePreferenceUtil util = new SharePreferenceUtil(
+							LoginActivity.this, Constants.SAVE_USER);
+					util.setId(e_userName.getText().toString());
+					util.setPasswd(e_password.getText().toString());
+					util.setEmail(list.get(0).getEmail());
+					util.setName(list.get(0).getName());
+					util.setImg(list.get(0).getImg());
 
-		@Override
-		public void onClick(View v) {
-			switch (v.getId()) {
-			case R.id.ugv2_login_btn:
+					UserDB db = new UserDB(LoginActivity.this);
+					db.addUser(list);
 
-				if(OperationEnableTimer.isEnable()){
-					/*OperationEnableTimer.disableOperation(1000);
-					
-					
-					Util.hideVirtualKeyPad(mContext, userName);
-	
-					//
-					uname = userName.getText().toString().trim();
-					upwd = password.getText().toString().trim();
-					String siteId = config.getSiteId();
-	
-					//密码可以为空
-					if (("".equals(uname))) {
-						showMessageDialog(getString(R.string.warnning_login_input));
-						return;
-					}
-	
-					String c = Util.checkInput(uname);
-	
-					if (c != null) {
-						showMessageDialog(getString(R.string.warnning_login_input_illegal));
-						return;
-					}
-	
-					if (!checkSiteId(siteId)) {
-						showMessageDialog(getString(R.string.warnning_login_site_invaild));
-						return;
-					}*/
-	
-					userLogin(uname, upwd);
+					Intent i = new Intent(LoginActivity.this,NavigationActivity.class/*FriendListActivity.class*/);
+					i.putExtra(Constants.MSGKEY, msg);
+					startActivity(i);
 
+					if (mDialog.isShowing())
+						mDialog.dismiss();
+					finish();
+					Toast.makeText(getApplicationContext(), "登录成功", 0).show();
+				} else {
+					DialogFactory.ToastDialog(LoginActivity.this, "QQ登录",
+							"亲！您的帐号或密码错误哦");
+					if (mDialog.isShowing())
+						mDialog.dismiss();
 				}
 				break;
-			case R.id.ugv2_login_setting:
-				showDialog(DLG_ID_SETTING);
+			default:
 				break;
 			}
 		}
-	};
-
-	private void initSitesList() {
-		Util.hideVirtualKeyPad(mContext, userName);
-		
-		/*String webHost = config.getHost();
-		
-		if(siteNameList == null || (oldWeb != null && !oldWeb.equals(webHost))){
-			
-			if(webHost.equals("")){
-				showMessageDialog(getString(R.string.warring_hint_web_setting));
-				return;
-			}
-			
-			CWUploadWebService.initClientHost(webHost);
-			
-			mIofferService.querySiteInfo(mHandler) ;
-			
-		} else {
-			showSiteListDialog() ;
-		}*/
-		showSiteListDialog() ;
-	}
-
-	private void showSiteListDialog() {
-		
-		if(siteNameList == null || siteNameList.length == 0){ 
-			return ;
-		}
-		
-		ArrayAdapter<String> siteAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, siteNameList);
-		siteAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		siteSpinner.setAdapter(siteAdapter);
-		int selectIndex = 0;
-		for (int i = 0; i < list.size(); i++) {
-			if (siteId.equals(list.get(i).getSiteId())){
-				selectIndex = i;
-				break;
-			}
-		}
-		siteSpinner.setSelection(selectIndex);
-		siteSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
-
-			@Override
-			public void onItemSelected(AdapterView<?> arg0, View arg1,
-					int arg2, long arg3) {
-				Site site = list.get(arg2);
-				config.setSiteId(site.getSiteId());
-				config.setSiteName(site.getSiteName());
-				mAccessDatabase.updateObject(config);
-				
-				siteId 	= site.getSiteId() ;
-			}
-
-			@Override
-			public void onNothingSelected(AdapterView<?> arg0) {
-				
-			}
-		});
 	}
 	
-	private static final int DLG_ID_SETTING = 101;
-	@Override
-	protected Dialog onCreateDialog(int id) {
-		switch (id) {
-		case DLG_ID_SETTING:
-			Builder dialogBuilder = new AlertDialog.Builder(this);
-			dialogBuilder.setTitle("设置服务地址");
-			View layout = getLayoutInflater().inflate(R.layout.ugv2_setting_dialog_layout, null);
-			layout.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
-			final EditText onAddEditText = (EditText) layout.findViewById(R.id.editText);
-			final Button confirmButton = (Button) layout.findViewById(R.id.confirmButton);
-			confirmButton.setOnClickListener(new OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					String oldhost = config.getHost();
-
-					String newhost = onAddEditText.getText().toString();
-					if (TextUtils.isEmpty(newhost) || newhost.equals(oldhost)) {
-						dismissDialog(DLG_ID_SETTING);
-						return;
-					}
-
-					config.setHost(newhost);
-					config.setSiteId("-1");
-					config.setSiteName("");
-
-					mAccessDatabase.updateObject(config);
-					dismissDialog(DLG_ID_SETTING);
-					initSitesList();
+	
+	
+	/**
+	 * 判断手机网络是否可用
+	 * 
+	 * @param context
+	 * @return
+	 */
+	private boolean isNetworkAvailable() {
+		ConnectivityManager mgr = (ConnectivityManager) getApplicationContext()
+				.getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo[] info = mgr.getAllNetworkInfo();
+		if (info != null) {
+			for (int i = 0; i < info.length; i++) {
+				if (info[i].getState() == NetworkInfo.State.CONNECTED) {
+					return true;
 				}
-			});
-			dialogBuilder.setView(layout);
-			return dialogBuilder.create();
+			}
 		}
-		return super.onCreateDialog(id);
+		return false;
 	}
 
-	@Override
-	protected void onPrepareDialog(int id, Dialog dialog, Bundle args) {
-		super.onPrepareDialog(id, dialog, args);
-		switch (id) {
-		case DLG_ID_SETTING:
-			final EditText editText = (EditText) dialog.findViewById(R.id.editText);
-			editText.setText(config.getHost());
-			break;
-		default:
-			break;
-		}
-		super.onPrepareDialog(id, dialog);
-	}
-	
-	private long firstTime = 0;
-	@Override
-	public void onBackPressed() {
-		long secondTime = System.currentTimeMillis();
-		if (secondTime - firstTime > 3000) {
-			Toast.makeText(getApplicationContext(), "再按一次退出程序",
-					Toast.LENGTH_SHORT).show();
-			firstTime = secondTime;
-		} else {
-			killBackgroudProcess(mContext);
-			super.onBackPressed();
-		}
-	}
-	
-	public static void killBackgroudProcess(Context context) {
-		try {
-			Log.d("ApplicationUtil", "KillBackgroudProcess");
-			String packageName = context.getPackageName();
-			ActivityManager am = (ActivityManager) context
-					.getSystemService(Context.ACTIVITY_SERVICE);
-			am.killBackgroundProcesses(packageName);
+	private void toast(Context context) {
+		new AlertDialog.Builder(context)
+				.setTitle("温馨提示")
+				.setMessage("亲！您的网络连接未打开哦")
+				.setPositiveButton("前往打开",
+						new DialogInterface.OnClickListener() {
 
-			System.exit(0);
-		} catch (Exception e) {
-			DebugUtil.traceThrowableLog(e);
-		}
+							public void onClick(DialogInterface dialog,
+									int which) {
+								Intent intent = new Intent(
+										android.provider.Settings.ACTION_WIRELESS_SETTINGS);
+								startActivity(intent);
+							}
+						}).setNegativeButton("取消", null).create().show();
 	}
+
 }

@@ -27,6 +27,10 @@ public class Ugv2Application extends Application{
 		super.onCreate();
 		
 		initConfig();
+		System.out.println("MOTHERFUCKER");
+		System.out.println(AppDatabase.toString());
+		System.out.println(AppConfig.toString());
+		System.out.println(mAccessDatabase.toString());
 	}
 	
 	private final void initConfig(){
@@ -34,11 +38,13 @@ public class Ugv2Application extends Application{
 		if(!(AppDatabase == null || AppConfig == null || mAccessDatabase == null)) return ;
 		
 		if(AppDatabase == null){
+			Log.i("GOD","appDatabase is null");
 			DatabaseManager.initDBManager(this,1,null);
 			AppDatabase		= DatabaseManager.getDatabaseManager() ;
 		}
 		
 		if(AppConfig == null){
+			Log.i("GOD","AppConfig is null");
 			ArrayList<Object> list = AppDatabase.queryAllObject(UGCUploadConfig.class);
 			if(list != null && list.size() > 0){
 				AppConfig	= (UGCUploadConfig)list.get(0);
